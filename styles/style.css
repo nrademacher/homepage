@@ -1,0 +1,7 @@
+body {
+  align-items: center;
+}
+
+#website-title {
+  text-transform: capitalize;
+}
