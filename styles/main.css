@@ -1,5 +1,7 @@
 body {
   margin: 0;
+  background-color: black;
+  color: white;
 }
 
 #website-title {
@@ -7,5 +9,9 @@ body {
 }
 
 a:hover {
-  text-shadow: 0 0 7px;
+  text-shadow: 0 0 7px cyan;
+}
+
+a {
+  color: cyan;
 }
