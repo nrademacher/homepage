@@ -5,3 +5,7 @@ body {
 #website-title {
   text-transform: capitalize;
 }
+
+a:hover {
+  text-shadow: 0 0 7px;
+}
