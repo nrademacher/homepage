@@ -6,4 +6,6 @@ html {
 body {
   font-size: 13;
   background-color: #efefef;
+  padding: 10px;
+  margin: 0;
 }
