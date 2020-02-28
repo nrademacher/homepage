@@ -50,30 +50,6 @@ header p {
   text-align: center;
 }
 
-li {
-  margin-bottom: 15px;
-  font-weight: bold;
-}
-
-progress {
-  height: 20px;
-  color: black;
-  background: #efefef;
-}
-
-progress::-webkit-progress-bar {
-  background: #efefef;
-}
-
-progress::-webkit-progress-value {
-  background: black;
-}
-
-progress:::-moz-progress-bar {
-  color: black;
-  background: #efefef;
-}
-
 form {
   text-align: center;
   margin-top: 0;
