@@ -9,6 +9,7 @@ body {
   padding-left: 200px;
   padding-right: 200px;
   margin: 0;
+  flex-direction: column;
 }
 
 h1 {
