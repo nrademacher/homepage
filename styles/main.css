@@ -6,8 +6,6 @@ html {
 body {
   font-family: "Open Sans";
   padding-top: 20px;
-  padding-left: 200px;
-  padding-right: 200px;
   margin: 0;
   flex-direction: column;
 }
@@ -41,8 +39,6 @@ footer {
 header {
   background-color: black;
   color: white;
-  padding-left: 0px;
-  padding-right: 0px;
 }
 
 header p {
