@@ -5,7 +5,6 @@ html {
 
 body {
   font-family: "Open Sans";
-  padding-top: 20px;
   margin: 0;
   flex-direction: column;
 }
@@ -33,6 +32,8 @@ section {
 }
 
 footer {
+  background-color: black;
+  color: white;
   text-align: center;
 }
 
