@@ -35,13 +35,11 @@ footer {
   background-color: black;
   color: white;
   text-align: center;
-  position: fixed;
 }
 
 header {
   background-color: black;
   color: white;
-  position: fixed;
 }
 
 header p {
