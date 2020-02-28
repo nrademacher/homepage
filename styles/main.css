@@ -38,6 +38,11 @@ footer {
   text-align: center;
 }
 
+header {
+  background-color: black;
+  color: white;
+}
+
 header p {
   font-size: 25pt;
   padding-top: 5px;
