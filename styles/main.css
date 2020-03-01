@@ -19,6 +19,10 @@ h1 span {
   padding: 10px;
 }
 
+hr {
+  width: 50%;
+}
+
 p {
   text-align: center;
   padding: 0;
