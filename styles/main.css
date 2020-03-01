@@ -6,6 +6,7 @@ html {
 body {
   font-family: "Open Sans";
   margin: 0;
+  flex-direction: column;
 }
 
 h1 {
@@ -107,4 +108,8 @@ textarea {
 .copyright {
   font-size: 8pt;
   color: lightgray;
+}
+
+#paypal-button {
+  width: 60px;
 }
