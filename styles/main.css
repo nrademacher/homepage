@@ -64,6 +64,7 @@ form {
   outline: none;
   margin: 0;
   font-weight: bold;
+  width: 50%;
 }
 
 .submit:hover {
