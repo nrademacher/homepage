@@ -113,5 +113,5 @@ textarea {
 
 #paypal-button {
   width: 60px;
-  vertical-align: inherit;
+  align-content: center;
 }
