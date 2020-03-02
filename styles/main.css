@@ -19,8 +19,12 @@ h1 span {
   padding: 10px;
 }
 
-hr {
+.hr-medium {
   width: 50%;
+}
+
+.hr-small {
+  width: 25%;
 }
 
 p {
