@@ -27,6 +27,10 @@ h1 span {
   width: 25%;
 }
 
+a:hover {
+  cursor: pointer;
+}
+
 p {
   text-align: center;
   padding: 0;
