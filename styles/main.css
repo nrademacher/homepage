@@ -9,6 +9,7 @@ body {
   text-align: center;
   width: min-content;
   align-self: center;
+  display: inline-block;
 }
 
 .hr-medium {
