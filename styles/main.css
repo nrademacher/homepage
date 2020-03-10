@@ -10,16 +10,6 @@ body {
   text-align: center;
 }
 
-h1 {
-  text-align: center;
-  padding: 18px 0 18px 0;
-  margin: 0 0 10px 0;
-}
-
-h1 span {
-  padding: 10px;
-}
-
 .hr-medium {
   width: 50%;
 }
@@ -44,13 +34,11 @@ section {
 }
 
 header {
-  margin-top: 5px;
   background-color: black;
   color: white;
 }
 
-header p {
-  font-size: 25pt;
+header h1 {
   padding-top: 5px;
   font-weight: bold;
 }
