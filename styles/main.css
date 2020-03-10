@@ -10,13 +10,11 @@ body {
 }
 
 .hr-medium {
-  width: 50%;
-  height: 200%;
+  width: 75%;
 }
 
 .hr-small {
   width: 25%;
-  height: 200%;
 }
 
 a:hover {
