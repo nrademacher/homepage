@@ -37,23 +37,6 @@ form {
   margin-top: 0;
 }
 
-.submit {
-  background-color: black;
-  padding: 12px 45px;
-  border-radius: 5px;
-  cursor: pointer;
-  color: #ffffff;
-  border: none;
-  outline: none;
-  margin: 0;
-  font-weight: bold;
-  width: 50%;
-}
-
-.submit:hover {
-  background-color: gray;
-}
-
 input,
 textarea {
   margin-bottom: 10px;
