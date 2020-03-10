@@ -20,10 +20,6 @@ h1 span {
   padding: 10px;
 }
 
-.hr-large {
-  width: 75%;
-}
-
 .hr-medium {
   width: 50%;
 }
@@ -49,6 +45,8 @@ section {
 
 header {
   margin-top: 5px;
+  background-color: black;
+  color: white;
 }
 
 header p {
