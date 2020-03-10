@@ -43,15 +43,6 @@ section {
   border-radius: 10px;
 }
 
-footer {
-  text-align: center;
-  float: bottom;
-}
-
-header {
-  float: top;
-}
-
 header p {
   font-size: 25pt;
   padding-top: 5px;
