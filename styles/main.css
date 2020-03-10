@@ -5,6 +5,15 @@ body {
   text-align: center;
 }
 
+h1 {
+  padding: 18px 0 18px 0;
+  margin: 0 0 10px 0;
+}
+
+h1 span {
+  padding: 10px;
+}
+
 .hr-medium {
   width: 50%;
 }
@@ -25,6 +34,11 @@ p {
 header {
   background-color: black;
   color: white;
+}
+
+header h1 {
+  padding-top: 5px;
+  font-weight: bold;
 }
 
 form {
