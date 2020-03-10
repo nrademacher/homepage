@@ -91,6 +91,7 @@ textarea {
   margin-right: auto;
   height: 25%;
   width: 25%;
+  filter: grayscale(100%);
 }
 
 #contacts img {
