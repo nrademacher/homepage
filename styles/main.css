@@ -43,6 +43,10 @@ section {
   border-radius: 10px;
 }
 
+header {
+  margin-top: 5px;
+}
+
 header p {
   font-size: 25pt;
   padding-top: 5px;
@@ -108,7 +112,7 @@ textarea {
   opacity: 0.8;
 }
 
-.copyright {
+#header .copyright {
   font-size: 8pt;
   color: lightgray;
 }
