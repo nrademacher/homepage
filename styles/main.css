@@ -44,8 +44,8 @@ section {
 }
 
 header section {
-  padding: 10px;
-  margin-bottom: 5px;
+  padding: 0;
+  margin-bottom: 0;
 }
 
 header p {
@@ -93,8 +93,8 @@ textarea {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 5px;
-  height: 25%;
-  width: 25%;
+  height: 17.5%;
+  width: 17.5%;
   filter: grayscale(100%) contrast(200%);
 }
 
