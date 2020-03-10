@@ -54,6 +54,19 @@ form {
   background-color: gray;
 }
 
+textarea {
+  height: 100px;
+}
+
+input,
+textarea {
+  margin-bottom: 10px;
+  font-size: 12pt;
+  padding: 15px 10px 10px;
+  width: 60%;
+  outline: none;
+}
+
 #my-picture {
   border-radius: 40%;
   margin-left: auto;
