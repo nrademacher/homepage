@@ -45,7 +45,7 @@ section {
 
 header p {
   font-size: 25pt;
-  padding-top: 5px;
+  padding-top: 15px;
   margin: 0;
   font-weight: bold;
 }
@@ -85,13 +85,12 @@ textarea {
 }
 
 #my-picture {
-  border-radius: 40%;
-  margin-top: 0;
+  border-radius: 200%;
   margin-left: auto;
   margin-right: auto;
   height: 25%;
   width: 25%;
-  filter: grayscale(100%);
+  filter: grayscale(100%) brightness(50%);
 }
 
 #contacts img {
