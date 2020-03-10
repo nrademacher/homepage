@@ -45,9 +45,6 @@ section {
 
 header {
   margin-top: 5px;
-  background-color: black;
-  color: white;
-  border-radius: 50%;
 }
 
 header p {
@@ -113,11 +110,6 @@ textarea {
 
 #contacts img:hover {
   opacity: 0.8;
-}
-
-#header .copyright {
-  font-size: 8pt;
-  color: lightgray;
 }
 
 #paypal-button {
