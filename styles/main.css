@@ -11,10 +11,12 @@ body {
 
 .hr-medium {
   width: 50%;
+  height: 200%;
 }
 
 .hr-small {
   width: 25%;
+  height: 200%;
 }
 
 a:hover {
