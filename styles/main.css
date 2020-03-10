@@ -7,7 +7,7 @@ body {
   font-family: "Open Sans";
   margin: 0;
   text-align: center;
-  width: max-content;
+  width: min-content;
 }
 
 .hr-medium {
