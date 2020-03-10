@@ -20,6 +20,10 @@ h1 span {
   padding: 10px;
 }
 
+.hr-large {
+  width: 75%;
+}
+
 .hr-medium {
   width: 50%;
 }
