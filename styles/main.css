@@ -49,6 +49,7 @@ footer {
 }
 
 header {
+  float: top;
 }
 
 header p {
