@@ -100,7 +100,7 @@ textarea {
 #my-picture {
   border: 4px;
   border-radius: 50%;
-  display: block;
+  text-align: center;
   height: 50%;
   width: 50%;
 }
