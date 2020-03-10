@@ -50,6 +50,7 @@ footer {
 
 header {
   vertical-align: top;
+  position: fixed;
 }
 
 header p {
