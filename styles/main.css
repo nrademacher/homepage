@@ -7,6 +7,7 @@ body {
   font-family: "Open Sans";
   margin: 0;
   flex-direction: column;
+  text-align: center;
 }
 
 h1 {
@@ -32,7 +33,6 @@ a:hover {
 }
 
 p {
-  text-align: center;
   padding: 0;
   margin: 0;
 }
@@ -48,11 +48,9 @@ header p {
   padding-top: 5px;
   margin: 0;
   font-weight: bold;
-  text-align: center;
 }
 
 form {
-  text-align: center;
   margin-top: 0;
 }
 
@@ -108,10 +106,6 @@ textarea {
 
 #contacts img:hover {
   opacity: 0.8;
-}
-
-#contacts {
-  text-align: center;
 }
 
 .copyright {
