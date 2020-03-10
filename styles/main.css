@@ -80,7 +80,7 @@ textarea {
 .skill-icon {
   width: 120px;
   height: 120px;
-  filter: grayscale(100%) contrast(300%);
+  filter: grayscale(100%) contrast(400%);
 }
 
 .copyright {
