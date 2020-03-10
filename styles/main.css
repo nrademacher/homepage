@@ -1,4 +1,5 @@
-html {
+html,
+body {
   overscroll-behavior: none;
 }
 
@@ -8,21 +9,8 @@ body {
   text-align: center;
 }
 
-.hr-medium {
-  width: 50%;
-}
-
-.hr-small {
-  width: 25%;
-}
-
 a:hover {
   cursor: pointer;
-}
-
-p {
-  padding: 0;
-  margin: 0;
 }
 
 header {
@@ -35,40 +23,6 @@ header {
 header h1 {
   padding: 10px 5px 15px 20px;
   margin: 0 0 10px 0;
-}
-
-form {
-  margin-top: 0;
-}
-
-.submit {
-  background-color: black;
-  padding: 12px 45px;
-  border-radius: 5px;
-  cursor: pointer;
-  color: #ffffff;
-  border: none;
-  outline: none;
-  margin: 0;
-  font-weight: bold;
-  width: 50%;
-}
-
-.submit:hover {
-  background-color: gray;
-}
-
-textarea {
-  height: 100px;
-}
-
-input,
-textarea {
-  margin-bottom: 10px;
-  font-size: 12pt;
-  padding: 15px 10px 10px;
-  width: 60%;
-  outline: none;
 }
 
 #my-picture {
@@ -100,6 +54,14 @@ textarea {
   width: 120px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.hr-medium {
+  width: 50%;
+}
+
+.hr-small {
+  width: 25%;
 }
 
 .copyright {
