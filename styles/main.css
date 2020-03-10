@@ -97,6 +97,14 @@ textarea {
   outline: none;
 }
 
+#my-picture {
+  border: 4px;
+  border-radius: 50%;
+  display: block;
+  height: 50%;
+  width: 50%;
+}
+
 #contacts img {
   height: 60px;
   width: 60px;
