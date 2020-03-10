@@ -19,8 +19,8 @@ body {
   width: 75%;
 }
 
-.hr-inherit {
-  width: inherit;
+.hr-small {
+  width: 25%;
 }
 
 a:hover {
