@@ -45,7 +45,9 @@ section {
 
 header {
   margin-top: 5px;
-  color: aqua;
+  background-color: black;
+  color: white;
+  border-radius: 50%;
 }
 
 header p {
