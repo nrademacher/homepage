@@ -5,11 +5,10 @@ body {
 
 body {
   font-family: "Open Sans";
-  margin: 0;
+  margin: auto;
   text-align: center;
   width: min-content;
   align-self: center;
-  display: inline-block;
 }
 
 .hr-medium {
