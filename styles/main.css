@@ -54,10 +54,6 @@ form {
   background-color: gray;
 }
 
-textarea {
-  height: 100px;
-}
-
 input,
 textarea {
   margin-bottom: 10px;
