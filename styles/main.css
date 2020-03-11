@@ -13,13 +13,16 @@ body {
 .content {
   max-width: 50%;
   margin: auto;
+  position: relative;
 }
 
 .caption {
   font-size: 2em;
   font-weight: bold;
   opacity: 50%;
-  position: static;
+  position: absolute;
+  z-index: -1;
+  overflow: hidden;
 }
 
 .hr-medium {
@@ -70,19 +73,13 @@ textarea {
   filter: grayscale(100%) contrast(200%);
 }
 
-#about-me {
-  background-image: url("data:image/svg+xml;utf8,
-  <svg xmlns='http://www.w3.org/2000/svg' version='1.1'
-       height='50px' width='120px'>
-    <text x='0' y='15' fill='red' font-size='20'>I love SVG!</text>
-  </svg>");
-}
 #contacts img {
   height: 60px;
   width: 60px;
   margin-left: 7px;
   margin-right: 7px;
 }
+
 #contacts a {
   text-decoration: none;
 }
@@ -96,11 +93,13 @@ textarea {
   margin-left: auto;
   margin-right: auto;
 }
+
 .skill-icon {
   width: 120px;
   height: 120px;
   filter: grayscale(100%) contrast(500%);
 }
+
 .copyright {
   font-size: small;
   color: lightgray;
