@@ -18,11 +18,7 @@ body {
 
 .caption {
   font-size: 2em;
-  font-weight: bold;
   opacity: 50%;
-  position: static;
-  z-index: -1;
-  overflow: hidden;
 }
 
 .hr-medium {
