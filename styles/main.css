@@ -63,16 +63,6 @@ textarea {
   outline: none;
 }
 
-#my-picture img {
-  border-radius: 40%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 5px;
-  height: 17.5%;
-  width: 17.5%;
-  filter: grayscale(100%) contrast(200%);
-}
-
 #contacts img {
   height: 60px;
   width: 60px;
