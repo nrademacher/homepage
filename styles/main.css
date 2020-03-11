@@ -31,6 +31,11 @@ body {
   opacity: 50%;
 }
 
+.hr-vsmall {
+  width: 17.5%;
+  opacity: 50%;
+}
+
 a:hover {
   cursor: pointer;
 }
