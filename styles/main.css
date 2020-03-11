@@ -19,14 +19,17 @@ body {
   font-size: 1.5em;
   font-weight: bold;
   opacity: 50%;
+  position: fixed;
 }
 
 .hr-medium {
   width: 75%;
+  opacity: 50%;
 }
 
 .hr-small {
   width: 25%;
+  opacity: 50%;
 }
 
 a:hover {
