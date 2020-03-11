@@ -16,7 +16,7 @@ body {
 }
 
 .caption {
-  font-size: 1.5em;
+  font-size: 2em;
   font-weight: bold;
   opacity: 50%;
   position: static;
@@ -85,7 +85,7 @@ textarea {
   opacity: 0.8;
 }
 
-#paypal-button {
+#paypal-button img {
   width: 120px;
   margin-left: auto;
   margin-right: auto;
