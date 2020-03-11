@@ -49,7 +49,6 @@ header h1 {
 input,
 textarea {
   width: 60%;
-  outline: none;
 }
 
 #contacts img {
