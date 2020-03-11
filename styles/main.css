@@ -63,7 +63,7 @@ textarea {
   outline: none;
 }
 
-#my-picture {
+#my-picture img {
   border-radius: 40%;
   margin-left: auto;
   margin-right: auto;
