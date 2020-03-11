@@ -48,7 +48,6 @@ header h1 {
 
 input,
 textarea {
-  margin-bottom: 10px;
   width: 60%;
   outline: none;
 }
