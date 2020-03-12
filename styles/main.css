@@ -13,7 +13,6 @@ body {
 .content {
   max-width: 50%;
   margin: auto;
-  position: relative;
 }
 
 .caption {
