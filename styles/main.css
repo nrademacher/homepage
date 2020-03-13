@@ -52,11 +52,6 @@ header {
   z-index: 10;
 }
 
-header h1 {
-  padding: 10px 5px 15px 20px;
-  margin: 0 0 10px 0;
-}
-
 input {
   width: 60%;
 }
