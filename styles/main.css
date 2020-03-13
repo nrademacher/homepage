@@ -8,6 +8,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   text-align: center;
+  max-width: 50%;
 }
 
 p {
@@ -15,13 +16,7 @@ p {
 }
 
 .content {
-  max-width: 50%;
   margin: auto;
-}
-
-.caption {
-  font-size: 2em;
-  opacity: 50%;
 }
 
 .hr-medium {
@@ -36,7 +31,7 @@ p {
 
 .hr-vsmall {
   width: 15%;
-  opacity: 25%;
+  opacity: 50%;
 }
 
 a:hover {
@@ -44,8 +39,6 @@ a:hover {
 }
 
 header {
-  background-color: black;
-  color: white;
   width: 100%;
   position: fixed;
   top: 0px;
