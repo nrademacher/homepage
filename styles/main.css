@@ -19,19 +19,21 @@ p {
   margin: auto;
 }
 
+.content h2 {
+  padding: 0;
+  margin-top: 0;
+}
+
 .hr-medium {
   width: 75%;
-  opacity: 50%;
 }
 
 .hr-small {
   width: 25%;
-  opacity: 0.5;
 }
 
 .hr-vsmall {
   width: 15%;
-  opacity: 0.25;
 }
 
 a:hover {
@@ -51,16 +53,25 @@ header h1 {
   margin: auto;
 }
 
+footer {
+  background-color: black;
+  color: white;
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  z-index: 10;
+  font-size: small;
+}
+
 input {
   width: 60%;
 }
 
 #contacts img {
-  height: 64px;
-  width: 64px;
-  margin-left: 8px;
-  margin-right: 8px;
-  opacity: 0.75;
+  height: 128px;
+  width: 128px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #contacts a {
@@ -68,21 +79,15 @@ input {
 }
 
 #paypal-button {
-  width: 64px;
+  width: 128px;
   margin-left: auto;
   margin-right: auto;
-  opacity: 0.5;
 }
 
 .skill-icon {
   width: 128x;
   height: 128px;
-  margin-left: 8px;
-  margin-right: 8px;
+  margin-left: auto;
+  margin-right: auto;
   filter: grayscale(100%) contrast(500%);
-}
-
-.copyright {
-  font-size: small;
-  opacity: 25%;
 }
