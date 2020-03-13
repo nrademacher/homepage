@@ -43,6 +43,7 @@ header {
   position: fixed;
   top: 0px;
   z-index: 10;
+  opacity: 50%;
 }
 
 input {
