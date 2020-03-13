@@ -40,10 +40,9 @@ a:hover {
 
 header {
   width: 100%;
-  position: fixed;
+  position: sticky;
   top: 0px;
   z-index: 10;
-  opacity: 50%;
 }
 
 input {
