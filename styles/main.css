@@ -44,9 +44,7 @@ header {
   background-color: black;
   color: white;
   width: 100%;
-  position: fixed;
   top: 0px;
-  z-index: 10;
 }
 
 header h1 {
@@ -54,12 +52,8 @@ header h1 {
 }
 
 footer {
-  background-color: black;
-  color: white;
   width: 100%;
-  position: fixed;
   bottom: 0px;
-  z-index: 10;
   font-size: small;
 }
 
@@ -82,6 +76,21 @@ input {
   width: 128px;
   margin-left: auto;
   margin-right: auto;
+}
+
+header,
+footer {
+  opacity: 0.75;
+}
+
+.caption {
+  opacity: 0.5;
+}
+
+.hr-medium,
+.hr-small,
+.hr-vsmall {
+  opacity: 0.25;
 }
 
 .skill-icon {
