@@ -13,7 +13,7 @@ body {
   align-items: center;
   background: #ed037c;
   font-family: "Source Sans Pro", sans-serif;
-  font-size: 2rem;
+  font-size: 1rem;
   color: #fff;
   box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem,
     rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
@@ -320,6 +320,9 @@ body {
 }
 
 @media screen and (min-width: 800px) {
+  .card {
+    font-size: 2rem;
+  }
   .basic-grid {
     grid-template-columns: 400px auto 400px;
   }
