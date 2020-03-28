@@ -314,7 +314,7 @@ body {
   margin: 1.5rem;
 
   grid-template-columns: auto auto auto;
-  grid-template-rows: auto;
+  grid-template-rows: repeat(5, 20%);
 
   --stagger-delay: 50ms;
 }
