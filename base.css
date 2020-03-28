@@ -300,7 +300,6 @@ body {
 }
 
 .basic-grid {
-  height: 80vh;
   display: grid;
   gap: 1.5rem;
   grid-template-areas:
@@ -314,7 +313,7 @@ body {
   justify-items: center;
   margin: 1.5rem;
 
-  grid-template-columns: 400px auto 400px;
+  grid-template-columns: auto auto auto;
   grid-template-rows: repeat(5, 20%);
 
   --stagger-delay: 50ms;
