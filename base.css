@@ -20,7 +20,7 @@ body {
   height: 100%;
   width: 100%;
   transition: all 500ms;
-  overflow: hidden;
+  overflow: auto;
   margin: 0 0 15px;
   padding: 6px 15px 10px;
   align-items: flex-start;
