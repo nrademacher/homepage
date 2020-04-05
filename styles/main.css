@@ -8,6 +8,10 @@ body {
   font-size: 16px;
   line-height: 1.5;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 p {
@@ -15,8 +19,6 @@ p {
 }
 
 .content {
-  max-width: 50%;
-  margin: auto;
 }
 
 .content h2 {
