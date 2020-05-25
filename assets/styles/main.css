@@ -9,7 +9,7 @@ body {
 main,
 .splash {
   max-width: 600px;
-  margin: 0px auto;
+  margin: auto;
 }
 
 a {
