@@ -37,8 +37,8 @@ h1,
 }
 
 #pic {
-  height: 12.5vh;
-  width: 12.5vh;
+  height: 1em;
+  width: 1em;
   border-radius: 50%;
   float: right;
 }
