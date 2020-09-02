@@ -1,6 +1,6 @@
 body {
-  color: rgb(15, 15, 15);
-  background: #dbdbdb;
+  color: #111;
+  background: #ddd;
   margin: 80px 0;
   font-family: 'Work Sans', sans-serif;
   font-size: 24px;
@@ -26,12 +26,35 @@ h1 {
   font-weight: bold;
 }
 
+.blog body {
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.blog main {
+  margin: auto;
+  max-width: 1000px;
+}
+
 .blog p {
-  font-size: 18px;
+  margin-bottom: 24px;
+  margin: 0 0 16px;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.blog h1 {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 24px;
+  text-align: center;
 }
 
 .blog .date {
-  font-size: 14px;
+  font-size: 16px;
+  text-align: center;
 }
 
 h1,
@@ -63,7 +86,7 @@ img {
 }
 
 a:hover {
-  background: rgb(238, 170, 235);
+  background: rgb(240, 160, 240);
 }
 
 @media only screen and (max-device-width: 480px) {
