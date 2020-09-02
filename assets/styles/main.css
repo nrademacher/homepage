@@ -26,8 +26,12 @@ h1 {
   font-weight: bold;
 }
 
+.blog p {
+  font-size: 18px;
+}
+
 .blog .date {
-  font-size: 12px;
+  font-size: 14px;
 }
 
 h1,
