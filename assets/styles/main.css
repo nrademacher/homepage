@@ -6,6 +6,15 @@ body {
   font-size: 24px;
 }
 
+.social a:hover,
+.social a:focus,
+.social a:active,
+.social a:visited,
+.social a:link {
+  text-decoration: none;
+  background: none;
+}
+
 main,
 .splash {
   max-width: 600px;
