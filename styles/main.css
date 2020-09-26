@@ -1,4 +1,18 @@
-/* Navigation */
+footer {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 6em;
+  padding: 0px 30px;
+  opacity: 50%;
+  padding-bottom: 3em;
+  text-align: center;
+  font-size: medium;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+}
+
 #navigation {
   top: 0px;
   right: 0px;
