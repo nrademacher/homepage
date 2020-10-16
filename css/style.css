@@ -74,7 +74,7 @@ h2 {
   margin-left: 0em;
   margin-top: 1.5em;
   margin-bottom: 0.5em;
-  border-bottom: 0.08em #cccccc solid;
+  border-bottom: 0.04em #bbb solid;
   /* text-shadow:   rgba(0,0,0,0.1) 0 0 4px; */
 }
 h2 a {
@@ -210,6 +210,7 @@ footer {
   padding: 0px 30px;
   color: lightgray;
   padding-bottom: 3em;
+  font-size: smaller;
 }
 img {
   max-width: 100%;
