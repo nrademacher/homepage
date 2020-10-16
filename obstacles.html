@@ -4,20 +4,34 @@
 <html>
   <head>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <link rel="stylesheet" type="text/css" href="styles/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
     <title>Words As Obstacles</title>
   </head>
-  <body class="blog">
-    <main>
-      <p class="date">September 2015</p>
-      <br />
-      <h1>WORDS AS OBSTACLES</h1>
-      <br />
+  <body> 
+      <div id="header">
+        <nav role="navigation">
+          <ul>
+            <li><a href="/">home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">projects</a></li>
+            <li><a href="#" target="_blank">github</a></li>
+          </ul>
+        </nav>
+      </div>
+    
+    <div id=title>words as obstacles</div>
+    <main id="content">
+      <div class="date">September 2015</div>
+
       <p>
         Often, we don't say what we think; more often, we don't write what we
-        believe. The medium is the message.
+        believe.
       </p>
 
+      <p>The medium is the message.</p>
+            <!-- <img
+              src="https://images.unsplash.com/photo-1523903716430-8b05cc1ce968?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3734&q=80"
+              alt="Unsplash / Alexandra (Athens, Greece)" /> -->
       <p>
         Sometimes, however, we take the time to think about things, only to find
         ourselves ensnared by semantics. In the same vein, the minds of many
@@ -128,6 +142,22 @@
         single act of goodness can furl the flapping banner sewn with our every
         hurtful lie and words of hatred.
       </p>
+
     </main>
+      <div class="socials">
+        <script>(function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+            fjs.parentNode.insertBefore(js, fjs);
+          }(document, 'script', 'facebook-jssdk'));</script>
+        <div class="fb-share-button" data-href="https://www.nikolayrademacher.net" data-layout="button">
+        </div>
+        <div id="tweet">
+          <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a>
+          <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = "https://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
+        </div>
+      </div>
   </body>
 </html>

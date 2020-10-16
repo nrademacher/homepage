@@ -1,63 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Nikolay Rademacher</title>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
-      name="viewport"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/assets/icons/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/assets/icons/favicon-16x16.png"
-    />
-    <link type="text/css" rel="stylesheet" href="styles/normalize.css" />
-    <link type="text/css" rel="stylesheet" href="styles/main.css" />
-    <script
-      src="https://kit.fontawesome.com/10ed64f730.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
+<html>
 
-  <body class="index">
-    <div id="navigation">
-      <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/portfolio">Portfolio</a></li>
-          <li><a href="https://github.com/cxxiii">GitHub</a></li>
-        </ul>
-      </nav>
-    </div>
-    <main>
-      <header>
-        <h1>Nikolay Rademacher</h1>
-        <p><i class="fab fa-js-square"></i> Developer</p>
-      </header>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport"
+    content="user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+  <link href="/css/normalize.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="/css/style.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <title>Nikolay Rademacher</title>
 
-      <div id="links">
-        <p>&nbsp;</p>
-        <p>
-          <i class="fas fa-envelope"></i>
-          <a href="mailto:nikolay@nikolayrademacher.net"
-            >nikolay@nikolayrademacher.net</a
-          >
-        </p>
+  <meta name="description" content="archive - Nikolay Rademacher">
+  <meta name="keywords" content="">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Nikolay Rademacher">
+  <meta property="og:description" content="archive - Nikolay Rademacher">
+  <meta property="og:url" content="https://nikolayrademacher.net/">
+  <meta property="og:site_name" content="nikolayrademacher.net">
+</head>
+
+<body>
+  <div id="header">
+    <nav role="navigation">
+      <ul>
+        <li><a href="/">home</a></li>
+        <li><a href="#">about</a></li>
+        <li><a href="#">projects</a></li>
+        <li><a href="#" target="_blank">github</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div id="title">
+    nikolay rademacher
+  </div>
+
+  <div id="content">
+
+    <h2>history</h2>
+
+    <div class="list-item">
+      <div class="list-date">
+        oct 16, 2020
       </div>
+      <div class="list-left">
+        <a href="obstacles.html">words as obstacles</a>
 
-      <footer>
-        <div>Nikolay Rademacher. 2020.</div>
-      </footer>
-    </main>
-  </body>
+        <small class="category">essay</small>
+
+      </div>
+    </div>
+
+
+
+  <!-- <div id="sketch">
+    <div id="bar"><span id="sketch_title"></span> &raquo; <span id="capture">capture</span> | <span
+        id="close">close</span></div>
+  </div> -->
+
+      <div class="socials">
+        <script>(function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+            fjs.parentNode.insertBefore(js, fjs);
+          }(document, 'script', 'facebook-jssdk'));</script>
+        <div class="fb-share-button" data-href="https://www.your-domain.com/your-page.html" data-layout="button">
+        </div>
+        <div id="tweet">
+          <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a>
+          <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = "https://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
+        </div>
+      </div>
+  <footer>
+    <div class="right">
+      nikolay rademacher 2020.
+    </div>
+  </footer>
+
+</body>
+
 </html>
