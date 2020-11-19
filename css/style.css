@@ -1,6 +1,6 @@
 /* CUSTOMIZE THIS */
 
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300&family=Work+Sans:wght@300&family=Inconsolata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300&family=Work+Sans:wght@300&family=Spectral&family=Inconsolata&display=swap');
 
 :root {
   font-size: 16px;
@@ -48,18 +48,12 @@ h2 {
   border-bottom: 0.04em #ccc solid;
   /* text-shadow: rgba(0, 0, 0, 0.1) 0 0 4px; */
 }
-h2 a {
-  font-size: 28px;
-}
 h3 {
   margin-top: 1.5em;
   margin-left: 0em;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: bold;
   /* text-shadow: rgba(0,0,0,0.1) 0 0 4px; */
-}
-h3 a {
-  font-size: 22px;
 }
 .highlight pre {
   background: #ffffff;
@@ -157,7 +151,7 @@ nav ul li a:hover {
   margin-bottom: 3em;
 }
 #content {
-  max-width: 650px;
+  max-width: 65ch;
   margin: 0 auto;
   padding: 1em;
   padding-top: 0;
