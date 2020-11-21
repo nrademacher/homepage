@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Exo+2&family=Work+Sans&family=Spectral&family=Inconsolata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo+2&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&family=Spectral&family=Inconsolata&display=swap");
 
 /* CSS Custom Properties Definitions */
 
@@ -248,32 +248,7 @@ a:visited {
 }
 a:hover,
 focus {
-  /* color: darkred; */
   text-decoration: none;
-  text-shadow: rgba(102, 143, 254, 0.2) 0 0 6px;
-  transition: all 0.2s ease;
-}
-
-/* Code */
-
-p > code,
-li > code,
-a > code {
-  font-family: "Inconsolata";
-  background: #fbfbfb;
-  padding: 2px 2px;
-  font-size: 14px;
-  border-radius: 0.1em !important;
-}
-p > code,
-li > code {
-  background: #fff;
-  padding: 2px 2px;
-  /* border:     #ccc 1px dotted; */
-  font-size: 13px;
-  border-radius: 0.1em !important;
-  -webkit-border-radius: 0.1em !important;
-  -moz-border-radius: 0.1em !important;
 }
 
 /* Custom classes */
@@ -295,11 +270,7 @@ li > code {
 .main-heading {
   color: var(--color-primary);
   margin: 0;
-}
-
-#title {
-  font-family: "Work Sans", sans-serif;
-  font-size: 24px;
+  font-weight: var(--fontWeight-black);
 }
 
 .post-list-item {
