@@ -5,7 +5,7 @@ module.exports = {
       name: `Nikolay Rademacher`,
       summary: `I'm a fullstack JavaScript developer located in Bielefeld, Germany.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `Nikolay Rademacher's blog.`,
     // siteUrl: ``,
     // social: {
     //   twitter: ``,

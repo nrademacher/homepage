@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "my-blog",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "Nikolay Rademacher's coding blog/website",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Nikolay Rademacher",
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
@@ -27,9 +27,7 @@
     "prismjs": "^1.22.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
-    "react-helmet": "^5.2.1",
-    "typeface-merriweather": "0.0.72",
-    "typeface-montserrat": "0.0.75"
+    "react-helmet": "^5.2.1"
   },
   "devDependencies": {
     "prettier": "2.1.2"

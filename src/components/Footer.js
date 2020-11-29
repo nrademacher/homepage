@@ -3,7 +3,7 @@ import React from "react"
 const Footer = () => {
   return (
     <footer>
-      <a href="#top" target="_blank" rel="noopener noreferrer">
+      <a href="#top" rel="noopener noreferrer">
         back to top
       </a>{" "}
       &bull;{" "}
