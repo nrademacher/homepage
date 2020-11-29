@@ -20,8 +20,6 @@ let today = whatDay("Saturday")
 today() // Saturday
 ```
 
-What's happened here?
-
 1. `whatDay` is a function that returns a function `saveDay`
 2. We assign `today` a function call of `whatDay` with `"Saturday"` as the argument for `whatDay`'s `weekDay` parameter
 3. `saveDay` now *closes over* the outer variable `weekDay` (whose value is `"Saturday"`)
@@ -63,6 +61,41 @@ returnedIncrementCounter(); // 2
 Calls of `returnedIncrementCounter` seem to increment `counter`, even though the variable was not declared in `incrementCounter`s block. If we didn't know about closure, we might assume that calling it outside of `outer`'s execution context would throw an error, because `counter` would be undefined.
 
 But what happens is that the returned function (`returnedIncrementCounter` in this case) *closes over* its own *private copy* of `counter`—entirely disconnected from the original in `outer`—which it will now reference.
+
+Closure has many practical applications in JavaScript, such as limiting the way or number of times a function can be called:
+
+```javascript
+function authenticate() {
+  this.username = 'johndoe';
+  this.password = 'hashedAndSalted';
+  let loginAttempts = 0;
+  function login(username, password) {
+    if (loginAttempts >= 3) {
+      console.log('Sorry, too many attempts. Please contact support.');
+      return;
+    }
+    if (username !== this.username || password !== this.password) {
+      console.log('Sorry, incorrect username or password. Please try again.');
+      loginAttempts += 1;
+    } else {
+      console.log(`Login successful! Welcome, ${this.username}.`);
+    }
+  }
+  return login;
+}
+
+const userTriesToLogIn = authenticate();
+userTriesToLogIn('janedoe', 'secret'); // Sorry, incorrect username or password. Please try again.
+userTriesToLogIn('jamesdoe', 'verysecret'); // Sorry, incorrect username or password. Please try again.
+userTriesToLogIn('johndoe', '1234567'); // Sorry, incorrect username or password. Please try again.
+userTriesToLogIn('johndoe', 'hashed'); // Sorry, too many attempts. Please contact support.
+
+const anotherUserTriesToLogIn = authenticate();
+anotherUserTriesToLogIn('johndoe', 'hashed'); // Sorry, incorrect username or password. Please try again.
+anotherUserTriesToLogIn('johndoe', 'hashedAndSalted'); // Login successful! Welcome, johndoe.
+```
+
+As we can see, each instance of `login` starts fresh with its own persisted private copies of the relevant variables.
 
 Pretty neat.
 
