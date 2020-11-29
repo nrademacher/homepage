@@ -27,9 +27,8 @@ What's happened here?
 3. `saveDay` now *closes over* the outer variable `weekDay` (whose value is `"Saturday"`)
 4. `today` is now permanently linked to the variable, even after it has "expired" in the outer `whatDay` function after its life cycle completes within the function's block
 
-This allows us to use the "remembered" variables at appropriate places in our code.
+This allows us to use the "remembered" variables at appropriate places in our code:
 
-For example: 
 ```javascript
 function today(weekDay) {
   return function is(adjective) {
@@ -44,4 +43,26 @@ saturdayIs("great") // Saturday is great
 sundayIs("better") // Sunday is better
 ```
 
+Another example, this time without parameters:
+
+```javascript
+function outer() {
+  let counter = 0;
+  function incrementCounter() {
+    counter++;
+    console.log(counter);
+  }
+  return incrementCounter;
+}
+
+const returnedIncrementCounter = outer();
+returnedIncrementCounter(); // 1
+returnedIncrementCounter(); // 2
+```
+
+Calls of `returnedIncrementCounter` seem to increment `counter`, even though the variable was not declared in `incrementCounter`s block. If we didn't know about closure, we might assume that calling it outside of `outer`'s execution context would throw an error, because `counter` would be undefined.
+
+But what happens is that the returned function (`returnedIncrementCounter` in this case) *closes over* its own *private copy* of `counter`—entirely disconnected from the original in `outer`—which it will now reference.
+
 Pretty neat.
+
