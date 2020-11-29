@@ -3,7 +3,7 @@ module.exports = {
     title: `nikolay rademacher`,
     author: {
       name: `Nikolay Rademacher`,
-      summary: `I'm a fullstack JavaScript developer located in Bielefeld, Germany.`,
+      summary: `I'm a JavaScript developer living in Bielefeld, Germany.`,
     },
     description: `Nikolay Rademacher's blog.`,
     // siteUrl: ``,
@@ -74,4 +74,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};
