@@ -97,5 +97,68 @@ anotherUserTriesToLogIn('johndoe', 'hashedAndSalted'); // Login successful! Welc
 
 As we can see, each instance of `login` starts fresh with its own persisted private copies of the relevant variables.
 
+In summary, closure is a useful thing to know as a JavaScript developer. For instance, I can use it to play Blackjack against myself in Corona times:
+
+```javascript
+function blackjack(deck) {
+  let deckIndex = 0;
+  let numSum = 0;
+  return function dealer(dealt1, dealt2) {
+    let playerIsOut = false;
+    let timesPlayerDealt = 0;
+    return function player() {
+      if (timesPlayerDealt < 1) {
+        timesPlayerDealt += 1;
+        numSum = dealt1 + dealt2;
+        return numSum;
+      } else if (timesPlayerDealt < 2) {
+        timesPlayerDealt += 1;
+        numSum = deck[deckIndex] + dealt1 + dealt2;
+        if (numSum <= 21) {
+          return numSum;
+        } else {
+          playerIsOut = true;
+          deckIndex += 1;
+          return 'Bust!';
+        }
+      } else if (playerIsOut) {
+        return "You're out!";
+      } else {
+        deckIndex += 1;
+        numSum = numSum + deck[deckIndex];
+        if (numSum <= 21) {
+          return numSum;
+        } else {
+          playerIsOut = true;
+          deckIndex += 1;
+          return 'bust';
+        }
+      }
+    };
+  };
+}
+
+const deal = blackjack(
+  Array(22)
+    .fill(1)
+    .map(() => Math.ceil(Math.random() * 11))
+);
+
+const playerOne = deal(
+  Math.ceil(Math.random() * 11),
+  Math.ceil(Math.random() * 11)
+);
+const playerTwo = deal(
+  Math.ceil(Math.random() * 11),
+  Math.ceil(Math.random() * 11)
+);
+const playerThree = deal(
+  Math.ceil(Math.random() * 11),
+  Math.ceil(Math.random() * 11)
+);
+
+playerOne(); // ...
+```
+
 Pretty neat.
 
