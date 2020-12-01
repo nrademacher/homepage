@@ -125,7 +125,7 @@ function blackjack(deck) {
         return "You're out!";
       } else {
         deckIndex += 1;
-        numSum = numSum + deck[deckIndex];
+        numSum += deck[deckIndex];
         if (numSum <= 21) {
           return numSum;
         } else {
@@ -139,7 +139,7 @@ function blackjack(deck) {
 }
 
 const deal = blackjack(
-  Array(46)
+  Array(42)
     .fill(1)
     .map(() => Math.ceil(Math.random() * 11))
 );
