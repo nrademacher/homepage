@@ -139,7 +139,7 @@ function blackjack(deck) {
 }
 
 const deal = blackjack(
-  Array(22)
+  Array(46)
     .fill(1)
     .map(() => Math.ceil(Math.random() * 11))
 );
