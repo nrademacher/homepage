@@ -131,7 +131,7 @@ function blackjack(deck) {
         } else {
           playerIsOut = true;
           deckIndex += 1;
-          return 'bust';
+          return 'Bust!';
         }
       }
     };
