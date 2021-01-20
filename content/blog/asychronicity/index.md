@@ -1,5 +1,5 @@
 ---
-title: Asynchronicity
+title: Asynchronicity (Part 1?)
 date: "2021-01-19"
 description: "Overview of the asynchronous relationship between JavaScript and the web"
 ---
