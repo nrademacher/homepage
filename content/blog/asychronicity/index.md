@@ -10,7 +10,7 @@ Delegation is a response to the recognition that a given person might be very go
 
 A football player might try to be their own manager. But they would have to split their time and energy between their training regimen and management, making it impossible or very difficult to perform well at either. He would quickly fall behind other players who are able to concentrate fully on their learned profession by having a partner with the needed talent and capacities for management duties.
 
-So, instead, a talented football player and a capable manager together should form a business unit to effectively and efficiently _interface_ with the rest of the world. If we look at the world today, we can see that virtually all enterprise is made up of such business units of various and variied people, such as companies and governments, who compensate for individual weaknesses and amplify individual strengths by delegation.
+So, instead, a talented football player and a capable manager together should form a business unit to effectively and efficiently _interface_ with the rest of the world. If we look at the world today, we can see that virtually all enterprise is made up of such business units of various and varied people, such as companies and governments, who compensate for individual weaknesses and amplify individual strengths by delegation.
 
 The relationship between JavaScript and the browser follows this delegation principle.
 
