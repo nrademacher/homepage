@@ -3,7 +3,7 @@ module.exports = {
     title: `nikolay rademacher`,
     author: {
       name: `Nikolay Rademacher`,
-      summary: `I'm a JavaScript developer living in Bielefeld, Germany.`,
+      summary: `I'm a JavaScript developer living in Bielefeld, Germany. I'll be writing primarily about JavaScript to explain concepts to myself (and, as a desirable side effect, maybe others as well).`,
     },
     description: `Nikolay Rademacher's blog.`,
     // siteUrl: ``,
