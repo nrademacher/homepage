@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href=".tailwind.styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400&family=Work+Sans:wght@200;300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.15.3/css/all.min.css"
+    />
+  </head>
+  <body
+    class="flex flex-col max-w-4xl mx-auto px-8 bg-gray-100 text-gray-900 textShadow-sm antialiased subpixel-antialiased"
+  >
+    <header
+      class="mt-4 mb-12 flex flex-col md:flex-row items-center justify-between"
+    >
+      <h1 class="mb-4 md:mb-0 font-heading font-extralight text-4xl textShadow-lg">
+        nikolay rademacher
+      </h1>
+      <nav>
+        <ul
+          class="flex flex-row space-x-6 sm:text-center md:space-x-10 md:flex-row font-light text-lg text-gray-700 textShadow-md"
+        >
+          <li><a class="hover:underline hover:text-gray-900" href="#projects">Projects</a></li>
+          <li>
+            <a class="hover:underline hover:text-gray-900" href="https://github.com/cxxiii"
+              >GitHub</a
+            >
+          </li>
+          <li>
+            <a
+              class="hover:underline hover:text-gray-900"
+              href="https://www.linkedin.com/in/nikolay-rademacher-4b01891b8/"
+              >LinkedIn</a
+            >
+          </li>
+          <li>
+            <a
+              class="hover:underline hover:text-gray-900"
+              href="mailto:nikolay@nikolayrademacher.net"
+              >Email</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="w-full md:container">
+      <section class="mb-12">
+        <article
+          class="md:mx-auto flex flex-col md:flex-row items-center justify-around"
+        >
+          <section id="about" class="max-w-xl mx-auto md:mx-0 md:max-w-md">
+            <p class="font-light text-xl leading-relaxed">
+              I'm a highly motivated <span class="font-normal">web developer</span> with an affinity for
+              efficient, user-friendly solutions. If you want to work with me,
+              need my expertise, or are interested in my projects or
+              collaborations, I'm happy to hear from you.
+            </p>
+          </section>
+          <img
+            class="w-60 hidden md:block rounded-2xl"
+            src="https://avatars.githubusercontent.com/u/47133234?v=4"
+            alt="Nikolay Rademacher"
+          />
+        </article>
+      </section>
+      <section class="mb-16">
+        <!-- <h2 class="font-light text-2xl text-center textShadow-lg mb-6">Skills</h2> -->
+        <article
+          class="flex justify-around text-gray-600 text-xl sm:text-2xl md:text-3xl"
+        >
+          <i class="fab fa-html5 transition-all transform hover:scale-125 hover:text-html" title="HTML5"></i>
+          <i class="fab fa-css3-alt transition-all transform hover:scale-125 hover:text-css" title="CSS3"></i>
+          <i class="fab fa-js transition-all transform hover:scale-125 hover:text-javascript" title="JavaScript"></i>
+          <i class="fab fa-react transition-all transform hover:scale-125 hover:text-react" title="ReactJS"></i>
+          <i class="fab fa-figma transition-all transform hover:scale-125 hover:text-figma" title="Figma"></i>
+          <i class="fas fa-universal-access transition-all transform hover:scale-125 hover:text-a11y" title="Accessibility"></i>
+          <i class="fab fa-git transition-all transform hover:scale-125 hover:text-black" title="Git"></i>
+          <i class="fab fa-github transition-all transform hover:scale-125 hover:text-black" title="GitHub"></i>
+          <i class="fas fa-terminal transition-all transform hover:scale-125 hover:text-black" title="Terminal"></i>
+          <i class="fab fa-npm transition-all transform hover:scale-125 hover:text-npm" title="NPM"></i>
+          <i class="fab fa-node transition-all transform hover:scale-125 hover:text-node" title="NodeJS"></i>
+        </article>
+      </section>
+      <section id="projects">
+        <h2 class="font-light text-3xl text-center textShadow-lg mb-8">Projects</h2>
+        <section
+          id="repos"
+          class="grid gap-4 grid-cols-1 justify-center sm:grid-cols-2 mx-auto"
+        ></section>
+      </section>
+    </main>
+    <footer
+      class="mt-auto pt-12 pb-8 text-center text-sm font-light tracking-relaxed"
+    >
+      Made with <span class="text-red-500">♥</span> in Bielefeld
+    </footer>
+  </body>
+</html>

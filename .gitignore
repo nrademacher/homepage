@@ -1,0 +1,17 @@
+node_modules/
+
+# Don't accidentally commit Tailwind's raw output file
+.tailwind.styles.css
+
+build/
+
+.env
+.env.test
+
+yarn-debug.log*
+yarn-error.log*
+.yarn-integrity
+
+.eslintcache
+
+.DS_Store
