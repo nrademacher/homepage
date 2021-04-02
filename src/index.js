@@ -5,9 +5,24 @@ const getRepos = async () => {
 };
 
 const repos = getRepos();
-console.log(repos);
 
-repos.then((r) =>
+repos.then((r) => {
+  // using object lookups as workaround for PurgeCSS string interpolation issue
+  const bgHoverColors = {
+    html: "hover:bg-html",
+    css: "hover:bg-css",
+    javascript: "hover:bg-javascript",
+    typescript: "hover:bg-typescript",
+    react: "hover:bg-react",
+    lua: "hover:bg-lua",
+  };
+  const textHoverColors = {
+    html: "hover:text-html",
+    css: "hover:text-css",
+    javascript: "hover:text-javascript",
+    typescript: "hover:text-typescript",
+    lua: "hover:text-lua",
+  };
   r.forEach((r) => {
     if (r.description && r.language && !r.private) {
       const repoCard = document.createElement("a");
@@ -26,7 +41,7 @@ repos.then((r) =>
       repoCard.classList.add("shadow-md");
       repoCard.classList.add("transform");
       repoCard.classList.add("transition-all");
-      repoCard.classList.add(`hover:bg-${r.language.toLowerCase()}`);
+      repoCard.classList.add(bgHoverColors[r.language.toLowerCase()]);
       repoCard.classList.add("hover:shadow-inner");
       repoCard.classList.add("hover:scale-105");
       repoCard.classList.add("hover:bg-opacity-95");
@@ -38,7 +53,7 @@ repos.then((r) =>
       repoHeading.classList.add("textShadow-md");
       repoHeading.classList.add("font-normal");
       repoLang.classList.add("font-thin");
-      repoLang.classList.add(`text-${r.language.toLowerCase()}`);
+      repoLang.classList.add(textHoverColors[r.language.toLowerCase()]);
       repoLang.classList.add("group-hover:text-gray-50");
       repoText.textContent = r.description;
       repoLang.textContent = r.language;
@@ -48,5 +63,5 @@ repos.then((r) =>
       repoCard.append(repoCardHeader, repoText);
       document.getElementById("repos").appendChild(repoCard);
     }
-  })
-);
+  });
+});
