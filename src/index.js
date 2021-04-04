@@ -48,18 +48,26 @@
           repoCard.classList.add("hover:bg-opacity-95");
           repoCardHeader.classList.add("flex");
           repoCardHeader.classList.add("justify-between");
-          repoCardHeader.classList.add("group-hover:text-gray-50");
+          if (repo.language !== "JavaScript") {
+            repoCardHeader.classList.add("group-hover:text-gray-50");
+          }
           repoHeading.textContent = repo.name;
           repoHeading.classList.add("text-xl");
           repoHeading.classList.add("textShadow-md");
           repoHeading.classList.add("font-normal");
           repoLang.classList.add("font-thin");
           repoLang.classList.add(textColors[repo.language.toLowerCase()]);
-          repoLang.classList.add("group-hover:text-gray-50");
+          if (repo.language !== "JavaScript") {
+            repoLang.classList.add("group-hover:text-gray-50");
+          } else {
+            repoLang.classList.add("group-hover:text-gray-900");
+          }
           repoText.textContent = repo.description;
           repoLang.textContent = repo.language;
           repoText.classList.add("font-extralight");
-          repoText.classList.add("group-hover:text-gray-50");
+          if (repo.language !== "JavaScript") {
+            repoText.classList.add("group-hover:text-gray-50");
+          }
           repoCardHeader.append(repoHeading, repoLang);
           repoCard.append(repoCardHeader, repoText);
           document.getElementById("repos").appendChild(repoCard);
