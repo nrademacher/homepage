@@ -13,3 +13,7 @@
 .textShadow-sm {
   text-shadow:   rgba(0,0,0,0.1) 0 0 2px;
 }
+
+.active {
+  @apply text-gray-900
+}

@@ -21,16 +21,24 @@
     <header
       class="mt-4 mb-12 flex flex-col md:flex-row items-center justify-between"
     >
-      <h1 class="mb-4 md:mb-0 font-heading font-extralight text-3xl md:text-4xl textShadow-lg">
+      <h1
+        class="mb-4 md:mb-0 font-heading font-extralight text-4xl textShadow-lg"
+      >
         nikolay rademacher
       </h1>
       <nav>
         <ul
-          class="flex flex-row space-x-6 sm:text-center md:space-x-10 md:flex-row font-light text-lg text-gray-700 textShadow-md"
+          class="flex flex-row space-x-8 sm:text-center md:space-x-12 md:flex-row font-extralight text-lg text-gray-700 textShadow-md"
         >
-          <li><a class="hover:underline hover:text-gray-900" href="#projects">Projects</a></li>
           <li>
-            <a class="hover:underline hover:text-gray-900" href="https://github.com/cxxiii"
+            <a class="hover:underline hover:text-gray-900" href="#projects"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a
+              class="hover:underline hover:text-gray-900"
+              href="https://github.com/cxxiii"
               >GitHub</a
             >
           </li>
@@ -52,48 +60,109 @@
       </nav>
     </header>
     <main class="w-full md:container">
-      <section class="mb-16">
-        <article
-          class="md:mx-auto flex flex-col md:flex-row items-center justify-around"
-        >
-          <section id="about" class="max-w-xl mx-auto md:mx-0 md:max-w-md">
-            <article class="space-y-6 leading-relaxed">
-            <div class="font-normal text-3xl">Hello 👋</div>  
+      <section class="mb-10 flex justify-around">
+        <section id="about" class="max-w-xl md:mx-0 md:max-w-md">
+          <article class="space-y-6 leading-relaxed mx-auto md:mx-0">
+            <div class="font-normal text-3xl">Hello 👋</div>
             <p class="font-light text-xl">
-              I'm a highly motivated <span class="font-normal">web developer</span> with an affinity for
-              efficient, user-friendly solutions. If you want to work with me,
-              need my expertise, or are interested in my projects or
+              I'm a highly motivated
+              <span class="font-normal">web developer</span> with an affinity
+              for efficient, user-friendly solutions. If you want to work with
+              me, need my expertise, or are interested in my projects or
               collaborations, I'm happy to hear from you.
             </p>
-            </article>
-          </section>
-          <img
-            class="w-60 hidden md:block rounded-2xl"
-            src="https://avatars.githubusercontent.com/u/47133234?v=4"
-            alt="Nikolay Rademacher"
-          />
-        </article>
+          </article>
+        </section>
+        <img
+          class="w-60 h-60 hidden md:block rounded-2xl"
+          src="https://avatars.githubusercontent.com/u/47133234?v=4"
+          alt="Nikolay Rademacher"
+        />
       </section>
-      <section class="mb-16">
-        <!-- <h2 class="font-light text-2xl text-center textShadow-lg mb-6">Skills</h2> -->
+      <section class="mb-12">
         <article
-          class="flex justify-around text-gray-600 text-xl sm:text-2xl md:text-3xl"
+          class="flex justify-between text-gray-600 text-xl sm:text-2xl md:text-3xl"
         >
-          <i class="fab fa-html5 transition-all transform hover:scale-125 hover:text-html" title="HTML5"></i>
-          <i class="fab fa-css3-alt transition-all transform hover:scale-125 hover:text-css" title="CSS3"></i>
-          <i class="fab fa-js transition-all transform hover:scale-125 hover:text-javascript" title="JavaScript"></i>
-          <i class="fab fa-react transition-all transform hover:scale-125 hover:text-react" title="ReactJS"></i>
-          <i class="fab fa-figma transition-all transform hover:scale-125 hover:text-figma" title="Figma"></i>
-          <i class="fas fa-universal-access transition-all transform hover:scale-125 hover:text-a11y" title="Accessibility"></i>
-          <i class="fab fa-git transition-all transform hover:scale-125 hover:text-black" title="Git"></i>
-          <i class="fab fa-github transition-all transform hover:scale-125 hover:text-black" title="GitHub"></i>
-          <i class="fas fa-terminal transition-all transform hover:scale-125 hover:text-black" title="Terminal"></i>
-          <i class="fab fa-npm transition-all transform hover:scale-125 hover:text-npm" title="NPM"></i>
-          <i class="fab fa-node transition-all transform hover:scale-125 hover:text-node" title="NodeJS"></i>
+          <i
+            class="fab fa-html5 transition-all transform hover:scale-125 hover:text-html"
+            title="HTML5"
+          ></i>
+          <i
+            class="fab fa-css3-alt transition-all transform hover:scale-125 hover:text-css"
+            title="CSS3"
+          ></i>
+          <i
+            class="fab fa-js transition-all transform hover:scale-125 hover:text-javascript"
+            title="JavaScript"
+          ></i>
+          <i
+            class="fab fa-react transition-all transform hover:scale-125 hover:text-react"
+            title="ReactJS"
+          ></i>
+          <i
+            class="fab fa-figma transition-all transform hover:scale-125 hover:text-figma"
+            title="Figma"
+          ></i>
+          <i
+            class="fas fa-universal-access transition-all transform hover:scale-125 hover:text-a11y"
+            title="Accessibility"
+          ></i>
+          <i
+            class="fab fa-git transition-all transform hover:scale-125 hover:text-black"
+            title="Git"
+          ></i>
+          <i
+            class="fab fa-github transition-all transform hover:scale-125 hover:text-black"
+            title="GitHub"
+          ></i>
+          <i
+            class="fas fa-terminal transition-all transform hover:scale-125 hover:text-black"
+            title="Terminal"
+          ></i>
+          <i
+            class="fab fa-npm transition-all transform hover:scale-125 hover:text-npm"
+            title="NPM"
+          ></i>
+          <i
+            class="fab fa-node transition-all transform hover:scale-125 hover:text-node"
+            title="NodeJS"
+          ></i>
         </article>
       </section>
       <section id="projects">
-        <h2 class="font-light text-3xl text-center textShadow-lg mb-8">Projects</h2>
+        <h2 class="font-lighter text-2xl text-center textShadow-lg mb-7">
+          Projects
+        </h2>
+        <div
+          id="project-filter"
+          class="flex justify-between md:justify-around font-light text-base text-center text-gray-300 mb-9"
+        >
+          <button
+            id="all"
+            class="hover:text-gray-900 select:text-gray-900 focus:text-gray-900"
+            autofocus
+          >
+            All
+          </button>
+          <button id="html" class="hover:text-gray-900 focus:text-gray-900">
+            HTML
+          </button>
+          <button id="css" class="hover:text-gray-900 focus:text-gray-900">
+            CSS
+          </button>
+          <button
+            id="javascript"
+            class="hover:text-gray-900 focus:text-gray-900"
+          >
+            JavaScript
+          </button>
+          <button
+            id="typescript"
+            class="hover:text-gray-900 focus:text-gray-900"
+          >
+            TypeScript
+          </button>
+        </div>
         <section
           id="repos"
           class="grid gap-4 grid-cols-1 justify-center sm:grid-cols-2 mx-auto"
