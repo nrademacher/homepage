@@ -7,6 +7,7 @@ import { displayRepoCards } from "./repoCards";
   const repoFilter = document.getElementById("project-filter");
   const events = ["onclick", "onfocus", "onselect"];
   let filterEl;
+  document.getElementById("all").classList.add("active");
   let prevFilter = document.getElementById("all");
 
   for (let filter of repoFilter.children) {
