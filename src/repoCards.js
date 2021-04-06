@@ -77,7 +77,7 @@ export const displayRepoCards = (repos = getRepos()) => {
         if (repo.language !== "JavaScript") {
           repoText.classList.add("group-hover:text-gray-50");
         } else {
-          repoLang.classList.add("group-hover:text-javascript");
+          repoText.classList.add("group-hover:text-javascript");
         }
         repoCardHeader.append(repoHeading, repoLang);
         repoCard.append(repoCardHeader, repoText);
