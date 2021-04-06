@@ -24,7 +24,7 @@ export const displayRepoCards = (repos = getRepos()) => {
       lua: "text-lua",
     };
     r.forEach((repo) => {
-      if (repo.description && repo.language && !repo.private) {
+      if (repo.description && repo.language && !repo.private && repo.name != "dotfiles") {
         const repoCard = document.createElement("a");
         const repoCardHeader = document.createElement("div");
         const repoHeading = document.createElement("h3");
