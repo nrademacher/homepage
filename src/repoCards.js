@@ -45,7 +45,11 @@ export const displayRepoCards = (repos = getRepos()) => {
         repoCard.classList.add("shadow-md");
         repoCard.classList.add("transform");
         repoCard.classList.add("transition-all");
-        repoCard.classList.add(bgHoverColors[repo.language.toLowerCase()]);
+        if (repo.language !== "JavaScript") {
+          repoCard.classList.add(bgHoverColors[repo.language.toLowerCase()]);
+        } else {
+          repoCard.classList.add("hover:bg-gray-900");
+        }
         repoCard.classList.add("hover:shadow-xl");
         repoCard.classList.add("hover:scale-105");
         repoCard.classList.add("hover:bg-opacity-95");
@@ -63,13 +67,15 @@ export const displayRepoCards = (repos = getRepos()) => {
         if (repo.language !== "JavaScript") {
           repoLang.classList.add("group-hover:text-gray-50");
         } else {
-          repoLang.classList.add("group-hover:text-gray-900");
+          repoLang.classList.add("group-hover:text-javascript");
         }
         repoText.textContent = repo.description;
         repoLang.textContent = repo.language;
         repoText.classList.add("font-light");
         if (repo.language !== "JavaScript") {
           repoText.classList.add("group-hover:text-gray-50");
+        } else {
+          repoLang.classList.add("group-hover:text-javascript");
         }
         repoCardHeader.append(repoHeading, repoLang);
         repoCard.append(repoCardHeader, repoText);
