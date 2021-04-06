@@ -57,6 +57,8 @@ export const displayRepoCards = (repos = getRepos()) => {
         repoCardHeader.classList.add("justify-between");
         if (repo.language !== "JavaScript") {
           repoCardHeader.classList.add("group-hover:text-gray-50");
+        } else {
+          repoCardHeader.classList.add("group-hover:text-javascript");
         }
         repoHeading.textContent = repo.name;
         repoHeading.classList.add("text-xl");
