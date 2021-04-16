@@ -1,30 +1,32 @@
-import { displayRepoCards } from "./repoCards";
+import { displayRepoCards } from './components/repoCards';
+import { clAdd, clRm, cn, id } from './utils/domUtils';
 
 (() => {
   displayRepoCards();
 
-  const repos = document.getElementsByClassName("repo-card");
-  const repoFilter = document.getElementById("project-filter");
-  const events = ["onclick", "onfocus", "onselect"];
-  let filterEl;
-  document.getElementById("all").classList.add("active");
-  let prevFilter = document.getElementById("all");
+  const repos = cn('repo-card');
+  const repoFilter = id('project-filter');
+  const events = ['onclick', 'onfocus', 'onselect'];
+  let prevFilter = id('all');
+  clAdd(id('all'), 'active');
 
-  for (let filter of repoFilter.children) {
-    filterEl = document.getElementById(filter.id);
+  [...repoFilter.children].forEach((filter) => {
+    const filterEl = id(filter.id);
     events.forEach((event) => {
       filterEl[event] = () => {
-        for (let repo of repos) {
-            prevFilter.classList.remove("active");
-            filter.classList.add("active");
-            prevFilter = filter;
+        [...repos].forEach((repo) => {
+          clRm(prevFilter, 'active');
+          clAdd(filter, 'active');
+          prevFilter = filter;
           if (!repo.classList.contains(filter.id)) {
-            repo.classList.add("hidden");
+            repo.classList.add('hidden');
+            clAdd(repo, 'hidden');
           } else {
-            repo.classList.remove("hidden");
+            repo.classList.remove('hidden');
+            clRm(repo, 'hidden');
           }
-        }
+        });
       };
     });
-  }
+  });
 })();
