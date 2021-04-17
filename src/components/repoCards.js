@@ -22,9 +22,10 @@ export const displayRepoCards = (repos = getRepos()) => {
     };
     r.forEach((repo) => {
       if (
-        repo.description &&
-        repo.language &&
+        !repo.fork &&
         !repo.private &&
+        repo.language &&
+        repo.description &&
         repo.name != 'dotfiles'
       ) {
         const repoCard = linkEl(
