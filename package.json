@@ -1,6 +1,6 @@
 {
   "name": "homepage",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "My personal homepage",
   "main": "index.js",
   "repository": "https://github.com/cxxiii/homepage",
@@ -8,7 +8,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "yarn build:tailwind && webpack serve --open --config webpack.dev.js",
+    "dev": "export NODE_ENV=development && yarn build:tailwind && webpack serve --open --config webpack.dev.js",
     "build": "export NODE_ENV=production && yarn build:tailwind && yarn minify:css && webpack --config webpack.prod.js",
     "clean": "yarn clean:build && yarn clean:tailwind",
     "lint": "if [ -f .eslintrc.* ]; then eslint . --fix; else yarn setup:eslint && eslint . --fix; fi",
@@ -38,6 +38,6 @@
   },
   "dependencies": {
     "autoprefixer": "^10.2.5",
-    "tailwindcss": "^2.0.4"
+    "tailwindcss": "latest"
   }
 }
