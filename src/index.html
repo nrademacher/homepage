@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
     <title>Nikolay Rademacher</title>
-    <link rel="icon" href="../assets/favicon.ico">
+    <link rel="icon" href="../assets/favicon.ico" />
     <link rel="stylesheet" href=".tailwind.styles.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -17,19 +17,19 @@
     />
   </head>
   <body
-    class="flex flex-col max-w-4xl mx-auto px-4 bg-gray-100 text-gray-900 textShadow-sm antialiased subpixel-antialiased"
+    class="flex flex-col px-4 mx-auto max-w-4xl antialiased subpixel-antialiased text-gray-900 bg-gray-100 textShadow-sm"
   >
     <header
-      class="mt-4 mb-12 flex flex-col md:flex-row items-center justify-between"
+      class="flex flex-col justify-between items-center mt-4 mb-12 md:flex-row"
     >
       <h1
-        class="mb-4 md:mb-0 font-heading font-extralight text-4xl textShadow-lg"
+        class="mb-4 text-4xl font-extralight md:mb-0 font-heading textShadow-lg"
       >
         nikolay rademacher
       </h1>
       <nav>
         <ul
-          class="flex flex-row space-x-8 sm:text-center md:space-x-12 md:flex-row font-extralight text-lg text-gray-700 textShadow-md"
+          class="flex flex-row space-x-8 text-lg font-extralight text-gray-700 sm:text-center md:space-x-12 md:flex-row textShadow-md"
         >
           <li>
             <a class="hover:underline hover:text-gray-900" href="#projects"
@@ -61,11 +61,11 @@
       </nav>
     </header>
     <main class="w-full md:container">
-      <section class="mb-10 flex justify-around">
+      <section class="flex justify-around mb-10">
         <section id="about" class="max-w-xl md:mx-0 md:max-w-md">
-          <article class="space-y-6 leading-relaxed mx-auto md:mx-0">
-            <div class="font-normal text-3xl">Hello 👋</div>
-            <p class="font-light text-xl">
+          <article class="mx-auto space-y-6 leading-relaxed md:mx-0">
+            <div class="text-3xl font-normal">Hello 👋</div>
+            <p class="text-xl font-light">
               I'm a highly motivated
               <span class="font-normal">web developer</span> with an affinity
               for efficient, user-friendly solutions. If you want to work with
@@ -75,68 +75,68 @@
           </article>
         </section>
         <img
-          class="w-60 h-60 hidden md:block rounded-2xl"
+          class="hidden w-60 h-60 rounded-2xl md:block"
           src="https://avatars.githubusercontent.com/u/47133234?v=4"
           alt="Nikolay Rademacher"
         />
       </section>
       <section class="mb-12">
         <article
-          class="flex justify-between text-gray-600 text-xl sm:text-2xl md:text-3xl"
+          class="flex justify-between text-xl text-gray-600 sm:text-2xl md:text-3xl"
         >
           <i
-            class="fab fa-html5 transition-all transform hover:scale-125 hover:text-html"
+            class="transition-all transform fab fa-html5 hover:scale-125 hover:text-html"
             title="HTML5"
           ></i>
           <i
-            class="fab fa-css3-alt transition-all transform hover:scale-125 hover:text-css"
+            class="transition-all transform fab fa-css3-alt hover:scale-125 hover:text-css"
             title="CSS3"
           ></i>
           <i
-            class="fab fa-js transition-all transform hover:scale-125 hover:text-javascript"
+            class="transition-all transform fab fa-js hover:scale-125 hover:text-javascript"
             title="JavaScript"
           ></i>
           <i
-            class="fab fa-react transition-all transform hover:scale-125 hover:text-react"
+            class="transition-all transform fab fa-react hover:scale-125 hover:text-react"
             title="ReactJS"
           ></i>
           <i
-            class="fab fa-figma transition-all transform hover:scale-125 hover:text-figma"
+            class="transition-all transform fab fa-figma hover:scale-125 hover:text-figma"
             title="Figma"
           ></i>
           <i
-            class="fas fa-universal-access transition-all transform hover:scale-125 hover:text-a11y"
+            class="transition-all transform fas fa-universal-access hover:scale-125 hover:text-a11y"
             title="Accessibility"
           ></i>
           <i
-            class="fab fa-git transition-all transform hover:scale-125 hover:text-black"
+            class="transition-all transform fab fa-git hover:scale-125 hover:text-black"
             title="Git"
           ></i>
           <i
-            class="fab fa-github transition-all transform hover:scale-125 hover:text-black"
+            class="transition-all transform fab fa-github hover:scale-125 hover:text-black"
             title="GitHub"
           ></i>
           <i
-            class="fas fa-terminal transition-all transform hover:scale-125 hover:text-black"
+            class="transition-all transform fas fa-terminal hover:scale-125 hover:text-black"
             title="Terminal"
           ></i>
           <i
-            class="fab fa-npm transition-all transform hover:scale-125 hover:text-npm"
+            class="transition-all transform fab fa-npm hover:scale-125 hover:text-npm"
             title="NPM"
           ></i>
           <i
-            class="fab fa-node transition-all transform hover:scale-125 hover:text-node"
+            class="transition-all transform fab fa-node hover:scale-125 hover:text-node"
             title="NodeJS"
           ></i>
         </article>
       </section>
       <section id="projects">
-        <h2 class="font-normal text-2xl text-center textShadow-lg mb-7">
+        <h2 class="mb-7 text-2xl font-normal text-center textShadow-lg">
           Projects
         </h2>
         <div
           id="project-filter"
-          class="flex justify-between md:justify-around font-extralight text-base text-center text-gray-300 mb-9"
+          class="flex justify-between mb-9 text-base font-extralight text-center text-gray-300 md:justify-around"
         >
           <button
             id="all"
@@ -166,24 +166,51 @@
         </div>
         <section
           id="repos"
-          class="grid gap-4 grid-cols-1 justify-center sm:grid-cols-2 mx-auto"
+          class="grid grid-cols-1 gap-4 justify-center mx-auto sm:grid-cols-2"
         ></section>
       </section>
+      <section id="contact">
+        <h2 class="mt-12 mb-5 text-2xl font-normal text-center textShadow-lg">
+          Contact
+        </h2>
+        <form class="flex flex-col mx-auto w-8/12" name="contact" netlify>
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text">Your name</span>
+            </label>
+            <input
+              type="text"
+              name="name"
+              placeholder="Name"
+              class="input input-bordered"
+            />
+          </div>
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text">Your email address</span>
+            </label>
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              class="input input-bordered"
+            />
+          </div>
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text">Your message</span>
+            </label>
+            <textarea
+              name="message"
+              class="h-24 textarea textarea-bordered"
+              placeholder="Message"
+            ></textarea>
+          </div>
+          <button class="mt-5 w-1/4 bg-gray-900 btn" type="submit">Send</button>
+        </form>
+      </section>
     </main>
-    <form name="contact" netlify>
-  <p>
-    <label>Name <input type="text" name="name" /></label>
-  </p>
-  <p>
-    <label>Email <input type="email" name="email" /></label>
-  </p>
-  <p>
-    <button type="submit">Send</button>
-  </p>
-</form>
-    <footer
-      class="mt-auto pt-12 pb-8 text-center text-sm font-light tracking-relaxed"
-    >
+    <footer class="mt-24 mb-8 text-sm font-light text-center tracking-relaxed">
       Made with <span class="text-red-500">♥</span> in Bielefeld
     </footer>
   </body>
