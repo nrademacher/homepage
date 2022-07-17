@@ -41,6 +41,11 @@ export default function ProjectPage(
           {data.project.name}
         </h1>
       </header>
+      <h2
+        class={tw`mb-4 leading-tight text(gray-900 xl md:2xl) font-medium`}
+      >
+        Motivation
+      </h2>
       <p>{data.project.description}</p>
       {data.issues.length
         ? (
