@@ -2,7 +2,7 @@ import { type Issue, LinearClient, type Project } from "@linear/sdk";
 import { config } from "dotenv";
 
 const client = new LinearClient({
-  apiKey: config().LINEAR_API_KEY,
+  apiKey: Deno.env.get("LINEAR_API_KEY") || config().LINEAR_API_KEY,
 });
 
 export async function getActiveProjects(): Promise<Project[]> {
