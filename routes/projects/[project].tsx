@@ -1,30 +1,17 @@
 /** @jsx h */
-import {
-  getActiveProjectBySlugId,
-  getIssuesByProjectId,
-  type Issue,
-  type Project,
-} from "@linear";
-import { Handlers, type PageProps } from "$fresh/server.ts";
+import type { Handler, PageProps } from "$fresh/server.ts";
+import { getActiveProjectDataBySlugId, type ProjectData } from "@linear";
 import { Fragment, h } from "preact";
 import { DefaultLayout } from "../../layouts/DefaultLayout.tsx";
 import { tw } from "@twind";
 
-type ProjectData = {
-  project: Project;
-  issues: Issue[];
-};
-
-export const handler: Handlers<ProjectData | null> = {
-  async GET(_, ctx) {
-    const { project: projectSlugId } = ctx.params;
-    const project = await getActiveProjectBySlugId(projectSlugId);
-    if (!project) {
-      return ctx.render(null);
-    }
-    const issues = await getIssuesByProjectId(project.id);
-    return ctx.render({ project, issues });
-  },
+export const handler: Handler<ProjectData | null> = async (_, ctx) => {
+  const { project: projectSlugId } = ctx.params;
+  const projectData = await getActiveProjectDataBySlugId(projectSlugId);
+  if (!projectData) {
+    return ctx.render(null);
+  }
+  return ctx.render(projectData);
 };
 
 export default function ProjectPage(

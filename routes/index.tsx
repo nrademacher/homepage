@@ -1,5 +1,5 @@
 /** @jsx h */
-import { Handlers, type PageProps } from "$fresh/server.ts";
+import type { Handler, PageProps } from "$fresh/server.ts";
 import { getActiveProjects, type Project } from "@linear";
 import { h } from "preact";
 import { DefaultLayout } from "../layouts/DefaultLayout.tsx";
@@ -7,20 +7,18 @@ import { tw } from "@twind";
 import { Projects } from "../components/Projects.tsx";
 import { SocialLinks } from "../components/SocialLinks.tsx";
 
-export const handler: Handlers<Project[] | null> = {
-  async GET(_, ctx) {
-    const projects = await getActiveProjects();
-    if (!projects.length) {
-      return ctx.render(null);
-    }
-    return ctx.render(projects);
-  },
+export const handler: Handler<Project[] | null> = async (_, ctx) => {
+  const projects = await getActiveProjects();
+  if (!projects.length) {
+    return ctx.render(null);
+  }
+  return ctx.render(projects);
 };
 
 export default function Home({ data: projects }: PageProps<Project[] | null>) {
   return (
     <DefaultLayout>
-      <header class={tw`mb-8 flex flex(col sm:row) gap-8 items-center`}>
+      <header class={tw`mb-12 flex flex(col sm:row) gap-8 items-center`}>
         <h1 class={tw`leading-tight text(gray-900 4xl md:5xl) font-semibold`}>
           Hello 👋
         </h1>
@@ -30,9 +28,15 @@ export default function Home({ data: projects }: PageProps<Project[] | null>) {
         <a href="https://github.com/nrademacher" class={tw`link`}>
           Full-stack web developer{" "}
         </a>
-        with an affinity for efficient, user-friendly solutions. If you want to
-        work with me, need my expertise, or are interested in my projects or
-        collaborations, I'm happy to{" "}
+        at{" "}
+        <a href="https://www.itemis.com" class={tw`link`}>
+          itemis
+        </a>.
+      </p>
+      <p class={tw`mb-8 leading-7 text(gray-900 lg)`}>
+        I have an affinity for efficient, user-friendly web solutions. If you
+        want to work with me, need my expertise, or are interested in my
+        projects or collaborations, I'm happy to{" "}
         <a href="mailto:rademacher.nikolay@gmail.com" class={tw`link`}>
           hear from you
         </a>
@@ -45,7 +49,7 @@ export default function Home({ data: projects }: PageProps<Project[] | null>) {
         </a>
         .
       </p>
-      {projects ? <Projects class="mb-12" projects={projects} /> : null}
+      {projects ? <Projects class="mb-16" projects={projects} /> : null}
       <SocialLinks />
     </DefaultLayout>
   );

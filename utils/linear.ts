@@ -11,25 +11,25 @@ export async function getActiveProjects(): Promise<Project[]> {
   return projects.nodes.filter((project) => project.state === "started");
 }
 
-export async function getActiveProjectBySlugId(
+export type ProjectData = {
+  project: Project;
+  issues: Issue[];
+};
+
+export async function getActiveProjectDataBySlugId(
   projectSlugId: string,
-): Promise<Project | undefined> {
+): Promise<ProjectData | undefined> {
   const projects = await getActiveProjects();
 
-  return projects.find((project) => project.slugId === projectSlugId);
-}
+  const project = projects.find((project) => project.slugId === projectSlugId);
+  if (!project) {
+    return undefined;
+  }
 
-export async function getProjectById(projectId: string): Promise<Project> {
-  return await client.project(projectId);
-}
-
-export async function getIssuesByProjectId(
-  projectId: string,
-): Promise<Issue[]> {
-  const project = await getProjectById(projectId);
   const issues = await project.issues();
+  const filteredIssues = issues.nodes.filter((issue) => !issue.canceledAt);
 
-  return issues.nodes.filter((issue) => !issue.canceledAt);
+  return { project, issues: filteredIssues };
 }
 
-export { type Issue, type Project };
+export { type Project };
