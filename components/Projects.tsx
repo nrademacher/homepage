@@ -1,11 +1,9 @@
 /** @jsx h */
-import { getActiveProjects } from "@linear";
+import type { Project } from "@linear";
 import { h } from "preact";
 import { tw } from "@twind";
 
-const projects = await getActiveProjects();
-
-export default function Projects(props: { class?: string }) {
+export function Projects(props: { projects: Project[]; class?: string }) {
   return (
     <section class={tw`${props.class}`}>
       <header class={tw`mb-4 flex flex(col sm:row) gap-8 items-center`}>
@@ -14,7 +12,13 @@ export default function Projects(props: { class?: string }) {
         </h1>
       </header>
       <ul class={tw`ml-8 list-disc`}>
-        {projects.map((project) => <li><a class={tw`link`} href={`/projects/${project.slugId}`}>{project.name}</a></li>)}
+        {props.projects.map((project) => (
+          <li>
+            <a class={tw`link`} href={`/projects/${project.slugId}`}>
+              {project.name}
+            </a>
+          </li>
+        ))}
       </ul>
     </section>
   );

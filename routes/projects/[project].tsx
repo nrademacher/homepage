@@ -54,7 +54,7 @@ export default function ProjectPage(
             <ul class={tw`ml-8 list-none`}>
               {data.issues.reverse().map((issue) => (
                 <li>
-                <span class={tw`mr-2`}>{issue.completedAt ? '✅' : '⬜'}</span>
+                  <span class={tw`mr-2`}>{issue.completedAt ? "✅" : "⬜"}</span>
                   <span
                     class={tw`${
                       issue.completedAt ? "line-through text-gray-300" : ""
