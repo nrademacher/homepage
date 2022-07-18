@@ -23,7 +23,7 @@ export default function ProjectPage(
 
   return (
     <DefaultLayout pageName={data.project.name}>
-      <header class={tw`mb-8 flex flex(col sm:row) items-center`}>
+      <header class={tw`mb-12 flex flex(col sm:row) items-center`}>
         <h1 class={tw`leading-tight text(gray-900 2xl md:3xl) font-semibold`}>
           {data.project.name}
         </h1>
@@ -33,7 +33,30 @@ export default function ProjectPage(
       >
         Motivation
       </h2>
-      <p>{data.project.description}</p>
+      <p class={tw`leading-7 text(gray-900 lg)`}>
+        {data.project.description}
+      </p>
+      {data.links.length
+        ? (
+          <Fragment>
+            <h2
+              class={tw
+                `mt-8 mb-4 leading-tight text(gray-900 xl md:2xl) font-medium`}
+            >
+              Links
+            </h2>
+            <ul class={tw`ml-8 list-disc`}>
+              {data.links.map((link) => (
+                <li>
+                  <a class={tw`link`} href={link.url}>
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </Fragment>
+        )
+        : null}
       {data.issues.length
         ? (
           <Fragment>
@@ -44,7 +67,7 @@ export default function ProjectPage(
               Tasks/Issues
             </h2>
             <ul class={tw`ml-8 list-none`}>
-              {data.issues.reverse().map((issue) => (
+              {data.issues.map((issue) => (
                 <li>
                   <span class={tw`mr-2`}>{issue.completedAt ? "✅" : "⬜"}</span>
                   <span

@@ -1,4 +1,9 @@
-import { type Issue, LinearClient, type Project } from "@linear/sdk";
+import {
+  type Issue,
+  LinearClient,
+  type Project,
+  type ProjectLink,
+} from "@linear/sdk";
 import { config } from "dotenv";
 
 const client = new LinearClient({
@@ -19,6 +24,7 @@ export async function getActiveProjects(): Promise<Project[]> {
 export type ProjectData = {
   project: Project;
   issues: Issue[];
+  links: ProjectLink[];
 };
 
 export async function getActiveProjectDataBySlugId(
@@ -37,7 +43,9 @@ export async function getActiveProjectDataBySlugId(
   const issues = await project.issues();
   const filteredIssues = issues.nodes.filter((issue) => !issue.canceledAt);
 
-  return { project, issues: filteredIssues };
+  const links = await project.links();
+
+  return { project, issues: filteredIssues, links: links.nodes };
 }
 
 export type { Project };
