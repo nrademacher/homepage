@@ -5,10 +5,15 @@ const client = new LinearClient({
   apiKey: Deno.env.get("LINEAR_API_KEY") || config().LINEAR_API_KEY,
 });
 
+let projectsCache: Project[] = [];
+
 export async function getActiveProjects(): Promise<Project[]> {
   const projects = await client.projects();
+  projectsCache = projects.nodes.filter((project) =>
+    project.state === "started"
+  );
 
-  return projects.nodes.filter((project) => project.state === "started");
+  return projectsCache;
 }
 
 export type ProjectData = {
@@ -19,9 +24,12 @@ export type ProjectData = {
 export async function getActiveProjectDataBySlugId(
   projectSlugId: string,
 ): Promise<ProjectData | undefined> {
-  const projects = await getActiveProjects();
-
-  const project = projects.find((project) => project.slugId === projectSlugId);
+  let project = projectsCache.find((project) =>
+    project.slugId === projectSlugId
+  );
+  if (!project) {
+    project = await client.project(projectSlugId);
+  }
   if (!project) {
     return undefined;
   }
@@ -32,4 +40,4 @@ export async function getActiveProjectDataBySlugId(
   return { project, issues: filteredIssues };
 }
 
-export { type Project };
+export type { Project };
