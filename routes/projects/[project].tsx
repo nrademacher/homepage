@@ -28,14 +28,21 @@ export default function ProjectPage(
           {data.project.name}
         </h1>
       </header>
-      <h2
-        class={tw`mb-4 leading-tight text(gray-900 xl md:2xl) font-medium`}
-      >
-        Motivation
-      </h2>
-      <p class={tw`leading-7 text(gray-900 lg)`}>
-        {data.project.description}
-      </p>
+      {data.project.description
+        ? (
+          <Fragment>
+            <h2
+              class={tw
+                `mb-4 leading-tight text(gray-900 xl md:2xl) font-medium`}
+            >
+              Motivation
+            </h2>
+            <p class={tw`leading-7 text(gray-900 lg)`}>
+              {data.project.description}
+            </p>
+          </Fragment>
+        )
+        : null}
       {data.links.length
         ? (
           <Fragment>
