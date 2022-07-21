@@ -11,7 +11,7 @@ export function Projects(props: { projects: Project[]; class?: string }) {
           My current personal projects
         </h1>
       </header>
-      <ul class={tw`ml-8 list-disc`}>
+      <ol class={tw`ml-8 list-decimal`}>
         {props.projects.map((project) => (
           <li>
             <a class={tw`link`} href={`/projects/${project.slugId}`}>
@@ -19,7 +19,7 @@ export function Projects(props: { projects: Project[]; class?: string }) {
             </a>
           </li>
         ))}
-      </ul>
+      </ol>
     </section>
   );
 }
