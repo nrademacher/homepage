@@ -24,7 +24,10 @@ export default function ProjectPage(
   return (
     <DefaultLayout pageName={data.project.name}>
       <header class={tw`mb-12 flex flex(col sm:row) items-center`}>
-        <h1 class={tw`leading-tight text(gray-900 2xl md:3xl) font-semibold`}>
+        <h1
+          class={tw
+            `leading-tight text(gray-900 2xl md:3xl dark:white) font-semibold`}
+        >
           {data.project.name}
         </h1>
       </header>
@@ -33,11 +36,11 @@ export default function ProjectPage(
           <Fragment>
             <h2
               class={tw
-                `mb-4 leading-tight text(gray-900 xl md:2xl) font-medium`}
+                `mb-4 leading-tight text(gray-900 xl md:2xl dark:white) font-medium`}
             >
               Motivation
             </h2>
-            <p class={tw`leading-7 text(gray-900 lg)`}>
+            <p class={tw`paragraph`}>
               {data.project.description}
             </p>
           </Fragment>
@@ -48,13 +51,13 @@ export default function ProjectPage(
           <Fragment>
             <h2
               class={tw
-                `mt-8 mb-4 leading-tight text(gray-900 xl md:2xl) font-medium`}
+                `mt-8 mb-4 leading-tight text(gray-900 xl md:2xl dark:white) font-medium`}
             >
               Links
             </h2>
             <ul class={tw`ml-8 list-disc`}>
               {data.links.map((link) => (
-                <li>
+                <li class={tw`dark:text-dark-mode`}>
                   <a class={tw`link`} href={link.url}>
                     {link.label}
                   </a>
@@ -69,13 +72,13 @@ export default function ProjectPage(
           <Fragment>
             <h2
               class={tw
-                `mt-8 mb-4 leading-tight text(gray-900 xl md:2xl) font-medium`}
+                `mt-8 mb-4 leading-tight text(gray-900 xl md:2xl dark:white) font-medium`}
             >
               Tasks/Issues
             </h2>
             <ul class={tw`ml-8 list-none`}>
               {data.issues.map((issue) => (
-                <li>
+                <li class={tw`dark:text-dark-mode`}>
                   <span class={tw`mr-2`}>{issue.completedAt ? "✅" : "⬜"}</span>
                   <span
                     class={tw`${

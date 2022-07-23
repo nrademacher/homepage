@@ -4,34 +4,21 @@ import { Configuration, setup, apply } from "twind";
 export * from "twind";
 
 export const config: Configuration = {
-  darkMode: "class",
+  darkMode: "media",
   mode: "silent",
   theme: {
     extend: {
       backgroundColor: {
-        html: "#ee6535",
-        css: "#0c6aa7",
-        javascript: "#fcdc00",
-        typescript: "#007acc",
-        react: "#61dafb",
-        lua: "#2c2d72",
+        "dark-mode": "#121212",
       },
       textColor: {
-        html: "#ee6535",
-        css: "#0c6aa7",
-        javascript: "#fcdc00",
-        typescript: "#007acc",
-        react: "#61dafb",
-        lua: "#2c2d72",
-        a11y: "#3b4bbf",
-        figma: "#f04e27",
-        npm: "#ca3739",
-        node: "#6a9f65",
+        "dark-mode": "rgb(201, 209, 217)",
       },
     },
   },
   plugins: {
-    link: apply`text-yellow(600 hover:500) hover:underline transition duration-75 ease-in-out`,
+    link: apply`text-yellow(600 hover:500 dark:400 dark:hover:300) hover:underline transition duration-75 ease-in-out`,
+    paragraph: apply`leading-7 text(gray-900 lg dark:dark-mode)`,
   },
 };
 
