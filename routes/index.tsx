@@ -4,7 +4,6 @@ import { getActiveProjects, type Project } from "@linear";
 import { h } from "preact";
 import { DefaultLayout } from "../layouts/DefaultLayout.tsx";
 import { tw } from "@twind";
-import { Projects } from "../components/Projects.tsx";
 import { SocialLinks } from "../components/SocialLinks.tsx";
 
 export const handler: Handler<Project[] | null> = async (_, ctx) => {
@@ -49,7 +48,28 @@ export default function Home({ data: projects }: PageProps<Project[] | null>) {
         </a>
         .
       </p>
-      {projects ? <Projects class="mb-16" projects={projects} /> : null}
+      {projects
+        ? (
+          <section class={tw`mb-12`}>
+            <header class={tw`mb-4 flex flex(col sm:row) gap-8 items-center`}>
+              <h1
+                class={tw`leading-tight text(gray-900 xl md:2xl) font-medium`}
+              >
+                My current personal projects
+              </h1>
+            </header>
+            <ol class={tw`ml-8 list-decimal`}>
+              {projects.map((project) => (
+                <li>
+                  <a class={tw`link`} href={`/projects/${project.slugId}`}>
+                    {project.name}
+                  </a>
+                </li>
+              ))}
+            </ol>
+          </section>
+        )
+        : null}
       <SocialLinks />
     </DefaultLayout>
   );
