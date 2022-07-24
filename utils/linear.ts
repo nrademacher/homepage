@@ -40,12 +40,21 @@ export async function getActiveProjectDataBySlugId(
     return undefined;
   }
 
+  // Get issues, filter out canceled ones, then sort completed ones to bottom
   const issues = await project.issues();
   const filteredIssues = issues.nodes.filter((issue) => !issue.canceledAt);
+  const sortedIssues = filteredIssues.sort((a, b) => {
+    if (a.completedAt && !b.completedAt) {
+      return 1;
+    } else if (!a.completedAt && b.completedAt) {
+      return -1;
+    }
+    return 0;
+  });
 
   const links = await project.links();
 
-  return { project, issues: filteredIssues, links: links.nodes };
+  return { project, issues: sortedIssues, links: links.nodes };
 }
 
 export type { Project };
