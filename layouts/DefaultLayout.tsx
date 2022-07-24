@@ -9,11 +9,15 @@ export function DefaultLayout(
   return (
     <Fragment>
       <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta charSet="UTF-8" />
         <title>
           Nikolay Rademacher{props.pageName && ` | ${props.pageName}`}
         </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charSet="UTF-8" />
+        <meta
+          name="description"
+          content="Homepage of Nikolay Rademacher, Full-stack software developer"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main class={tw`min-h-screen min-w-screen grid dark:bg-dark-mode`}>
