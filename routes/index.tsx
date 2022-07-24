@@ -19,8 +19,7 @@ export default function Home({ data: projects }: PageProps<Project[] | null>) {
     <DefaultLayout>
       <section>
         <header
-          class={tw
-            `mb-12 flex flex(col sm:row) gap-8 items-center`}
+          class={tw`mb-12 flex flex(col sm:row) gap-8 items-center`}
         >
           <h1
             class={tw
@@ -48,20 +47,23 @@ export default function Home({ data: projects }: PageProps<Project[] | null>) {
           </a>
           .
         </p>
-        <p class={tw`mb-8 paragraph`}>
+        {
+          /*}<p class={tw`mb-8 paragraph`}>
           I occasionally post updates about my projects and learning on my{" "}
           <a href="https://blog.nikolayrademacher.net" class={tw`link`}>
             blog
           </a>
           .
-        </p>
+        </p>*/
+        }
       </section>
       {projects
         ? (
           <section class={tw`mb-12`}>
             <header class={tw`mb-4 flex flex(col sm:row) gap-8 items-center`}>
               <h2
-                class={tw`leading-tight text(gray-900 xl md:2xl dark:white) font-medium`}
+                class={tw
+                  `leading-tight text(gray-900 xl md:2xl dark:white) font-medium`}
               >
                 My current personal projects
               </h2>
