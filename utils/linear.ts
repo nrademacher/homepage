@@ -15,7 +15,7 @@ let projectsCache: Project[] = [];
 export async function getActiveProjects(): Promise<Project[]> {
   const projects = await client.projects();
   projectsCache = projects.nodes.filter((project) =>
-    project.state === "started"
+    !project.name.startsWith("PRIVATE:") && project.state === "started"
   );
 
   return projectsCache;
