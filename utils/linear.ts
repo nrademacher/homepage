@@ -21,9 +21,14 @@ export async function getActiveProjects(): Promise<Project[]> {
   return projectsCache;
 }
 
+type IssueItem = {
+  issue: Issue;
+  subIssues: Issue[];
+};
+
 export type ProjectData = {
   project: Project;
-  issues: Issue[];
+  issues: IssueItem[];
   links: ProjectLink[];
 };
 
@@ -51,10 +56,19 @@ export async function getActiveProjectDataBySlugId(
     }
     return 0;
   });
+  const issueItems = [];
+  for (const issue of sortedIssues) {
+    if (issue.parent) {
+      continue;
+    }
+    const subIssuesConnection = await issue.children();
+    const subIssues = subIssuesConnection.nodes;
+    issueItems.push({ issue, subIssues });
+  }
 
   const links = await project.links();
 
-  return { project, issues: sortedIssues, links: links.nodes };
+  return { project, issues: issueItems, links: links.nodes };
 }
 
 export type { Project };

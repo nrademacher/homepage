@@ -75,14 +75,36 @@ export default function ProjectPage(
             <ul class={tw`ml-8 list-none`}>
               {data.issues.map((issue) => (
                 <li class={tw`dark:text-dark-mode`}>
-                  <span class={tw`mr-2`}>{issue.completedAt ? "✅" : "⬜"}</span>
+                  <span class={tw`mr-2`}>
+                    {issue.issue.completedAt ? "✅" : "⬜"}
+                  </span>
                   <span
                     class={tw`${
-                      issue.completedAt ? "line-through text-gray-300" : ""
+                      issue.issue.completedAt
+                        ? "line-through text-gray-300"
+                        : ""
                     }`}
                   >
-                    {issue.title}
+                    {issue.issue.title}
                   </span>
+                  <ul class={tw`ml-8 list-none`}>
+                    {issue.subIssues.map((issue) => (
+                      <li class={tw`dark:text-dark-mode`}>
+                        <span class={tw`mr-2`}>
+                          {issue.completedAt ? "✅" : "⬜"}
+                        </span>
+                        <span
+                          class={tw`${
+                            issue.completedAt
+                              ? "line-through text-gray-300"
+                              : ""
+                          }`}
+                        >
+                          {issue.title}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
                 </li>
               ))}
             </ul>
