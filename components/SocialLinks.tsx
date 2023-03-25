@@ -1,7 +1,7 @@
 /** @jsx h */
 import { h } from "preact";
 import { tw } from "@twind";
-import { IconLink, GitHubIcon, TwitterIcon } from "./Icons.tsx";
+import { IconLink, GitHubIcon } from "./Icons.tsx";
 
 export function SocialLinks(props: { class?: string; tight?: boolean }) {
   return (
@@ -10,11 +10,6 @@ export function SocialLinks(props: { class?: string; tight?: boolean }) {
         href="https://github.com/nrademacher"
         title="GitHub"
         icon={GitHubIcon}
-      />
-      <IconLink
-        href="https://twitter.com/nikolay_magnus"
-        title="Twitter"
-        icon={TwitterIcon}
       />
     </div>
   );
