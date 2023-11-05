@@ -9,6 +9,6 @@
     "twind/": "https://esm.sh/twind@0.16.17/",
     "dotenv": "https://deno.land/x/dotenv@v3.2.0/mod.ts",
     "@linear": "./utils/linear.ts",
-    "@linear/sdk": "https://esm.sh/@linear/sdk@2.6.0"
+    "@linear/sdk": "https://esm.sh/@linear/sdk"
   }
 }
