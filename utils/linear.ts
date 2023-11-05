@@ -6,6 +6,8 @@ import {
 } from "@linear/sdk";
 import { config } from "dotenv";
 
+const PRIVATE_PROJECT_PREFIX = "PRIVATE:"
+
 const client = new LinearClient({
   apiKey: Deno.env.get("LINEAR_API_KEY") || config().LINEAR_API_KEY,
 });
@@ -15,7 +17,7 @@ let projectsCache: Project[] = [];
 export async function getActiveProjects(): Promise<Project[]> {
   const projects = await client.projects();
   projectsCache = projects.nodes.filter((project) =>
-    !project.name.startsWith("PRIVATE:") && project.state === "started"
+    !project.name.startsWith(PRIVATE_PROJECT_PREFIX) && project.state === "started"
   );
 
   return projectsCache;
