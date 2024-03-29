@@ -1,6 +1,4 @@
-/** @jsx h */
-import { h } from "preact";
-import { tw } from "@twind";
+import { tw } from "twind";
 import { GitHubIcon, IconLink, TwitterIcon } from "./Icons.tsx";
 
 export function SocialLinks(props: { class?: string; tight?: boolean }) {

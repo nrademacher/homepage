@@ -1,11 +1,9 @@
-/** @jsx h */
-import { ComponentType, h } from "preact";
-import { tw } from "@twind";
+import { ComponentType } from "preact";
 
 export function GitHubIcon() {
   return (
     <svg
-      class={tw`h-6 w-6 inline`}
+      class="h-6 w-6 inline"
       fill="currentColor"
       viewBox="0 0 24 24"
     >
@@ -21,7 +19,7 @@ export function GitHubIcon() {
 export function TwitterIcon() {
   return (
     <svg
-      class={tw`h-6 w-6 inline`}
+      class="h-6 w-6 inline"
       fill="currentColor"
       viewBox="0 0 24 24"
     >
@@ -38,13 +36,13 @@ export function IconLink(props: {
 }) {
   return (
     <a
-      class={tw`text-gray(500 hover:900) dark:hover:text-white transition duration-75 ease-in-out`}
+      class="text-gray(500 hover:900) dark:hover:text-white transition duration-75 ease-in-out"
       href={props.href}
       title={props.title}
       rel={props.rel}
       target="_blank"
     >
-      <span class={tw`sr-only`}>{props.title}</span>
+      <span class="sr-only">{props.title}</span>
       {h(props.icon, {}, null)}
     </a>
   );

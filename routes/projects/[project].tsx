@@ -1,9 +1,7 @@
-/** @jsx h */
 import type { Handler, PageProps } from "$fresh/server.ts";
 import { getActiveProjectDataBySlugId, type ProjectData } from "@linear";
-import { Fragment, h } from "preact";
 import { DefaultLayout } from "../../layouts/DefaultLayout.tsx";
-import { tw } from "@twind";
+import { tw } from "twind";
 
 export const handler: Handler<ProjectData | null> = async (_, ctx) => {
   const { project: projectSlugId } = ctx.params;
@@ -23,9 +21,9 @@ export default function ProjectPage(
 
   return (
     <DefaultLayout pageName={data.project.name}>
-      <header class={tw`mb-12 flex flex(col sm:row) items-center`}>
+      <header class="mb-12 flex flex(col sm:row) items-center">
         <h1
-          class={tw`leading-tight text(gray-900 2xl md:3xl dark:white) font-semibold`}
+          class="leading-tight text(gray-900 2xl md:3xl dark:white) font-semibold"
         >
           {data.project.name}
         </h1>
@@ -34,11 +32,11 @@ export default function ProjectPage(
         ? (
           <Fragment>
             <h2
-              class={tw`mb-4 leading-tight text(gray-900 xl md:2xl dark:white) font-medium`}
+              class="mb-4 leading-tight text(gray-900 xl md:2xl dark:white) font-medium"
             >
               Motivation
             </h2>
-            <p class={tw`paragraph`}>
+            <p class="paragraph">
               {data.project.description}
             </p>
           </Fragment>
@@ -48,14 +46,14 @@ export default function ProjectPage(
         ? (
           <Fragment>
             <h2
-              class={tw`mt-8 mb-4 leading-tight text(gray-900 xl md:2xl dark:white) font-medium`}
+              class="mt-8 mb-4 leading-tight text(gray-900 xl md:2xl dark:white) font-medium"
             >
               Links
             </h2>
-            <ul class={tw`ml-8 list-disc`}>
+            <ul class="ml-8 list-disc">
               {data.links.map((link) => (
-                <li class={tw`dark:text-dark-mode`}>
-                  <a class={tw`link`} href={link.url}>
+                <li class="dark:text-dark-mode">
+                  <a class="link" href={link.url}>
                     {link.label}
                   </a>
                 </li>
@@ -68,14 +66,14 @@ export default function ProjectPage(
         ? (
           <Fragment>
             <h2
-              class={tw`mt-8 mb-4 leading-tight text(gray-900 xl md:2xl dark:white) font-medium`}
+              class="mt-8 mb-4 leading-tight text(gray-900 xl md:2xl dark:white) font-medium"
             >
               Tasks/Issues
             </h2>
-            <ul class={tw`ml-8 list-none`}>
+            <ul class="ml-8 list-none">
               {data.issues.map((issue) => (
-                <li class={tw`dark:text-dark-mode`}>
-                  <span class={tw`mr-2`}>
+                <li class="dark:text-dark-mode">
+                  <span class="mr-2">
                     {issue.issue.completedAt ? "✅" : "⬜"}
                   </span>
                   <span
@@ -87,10 +85,10 @@ export default function ProjectPage(
                   >
                     {issue.issue.title}
                   </span>
-                  <ul class={tw`ml-8 list-none`}>
+                  <ul class="ml-8 list-none">
                     {issue.subIssues.map((issue) => (
-                      <li class={tw`dark:text-dark-mode`}>
-                        <span class={tw`mr-2`}>
+                      <li class="dark:text-dark-mode">
+                        <span class="mr-2">
                           {issue.completedAt ? "✅" : "⬜"}
                         </span>
                         <span
@@ -111,14 +109,14 @@ export default function ProjectPage(
           </Fragment>
         )
         : null}
-      <div class={tw`pt-16`}>
+      <div class="pt-16">
         <a
           href="/"
-          class={tw`inline-flex items-center gap-1 link`}
+          class="inline-flex items-center gap-1 link"
           title="Back to Index Page"
         >
           <svg
-            class={tw`inline-block w-5 h-5`}
+            class="inline-block w-5 h-5"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
           >
