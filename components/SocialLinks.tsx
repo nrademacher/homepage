@@ -11,6 +11,11 @@ export function SocialLinks(props: { class?: string; tight?: boolean }) {
         title="GitHub"
         icon={GitHubIcon}
       />
+      <IconLink
+        href="https://twitter.com/nikolay_magnus"
+        title="X/Twitter"
+        icon={TwitterIcon}
+      />
     </div>
   );
 }
