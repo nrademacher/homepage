@@ -42,6 +42,7 @@ export function IconLink(props: {
       href={props.href}
       title={props.title}
       rel={props.rel}
+      target="_blank"
     >
       <span class={tw`sr-only`}>{props.title}</span>
       {h(props.icon, {}, null)}
