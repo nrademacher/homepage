@@ -34,7 +34,7 @@ export default function Home({ data: projects }: PageProps<Project[] | null>) {
             Full-stack web developer{" "}
           </a>
           at{" "}
-          <a href="https://www.valuedesk.de" class={tw`link`}>
+          <a href="https://www.valuedesk.de/homepage/" class={tw`link`}>
             Valuedesk
           </a>.
         </p>
