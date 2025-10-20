@@ -22,7 +22,7 @@ export default function Home({ data: projects }: PageProps<Project[] | null>) {
         <p class={tw`mb-8 paragraph`}>
           I'm Nikolay Rademacher, a highly motivated{" "}
           <a href="https://github.com/nrademacher" class={tw`link`}>
-            Full-stack web developer{" "}
+            full-stack software engineer
           </a>
           .
         </p>
