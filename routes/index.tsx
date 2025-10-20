@@ -1,18 +1,9 @@
 /** @jsx h */
 import type { Handler, PageProps } from "$fresh/server.ts";
-import { getActiveProjects, type Project } from "@linear";
 import { h } from "preact";
 import { DefaultLayout } from "../layouts/DefaultLayout.tsx";
 import { tw } from "@twind";
 import { SocialLinks } from "../components/SocialLinks.tsx";
-
-export const handler: Handler<Project[] | null> = async (_, ctx) => {
-  const projects = await getActiveProjects();
-  if (!projects.length) {
-    return ctx.render(null);
-  }
-  return ctx.render(projects);
-};
 
 export default function Home({ data: projects }: PageProps<Project[] | null>) {
   return (
@@ -33,10 +24,7 @@ export default function Home({ data: projects }: PageProps<Project[] | null>) {
           <a href="https://github.com/nrademacher" class={tw`link`}>
             Full-stack web developer{" "}
           </a>
-          at{" "}
-          <a href="https://www.valuedesk.de/homepage/" class={tw`link`}>
-            Valuedesk
-          </a>.
+          .
         </p>
         <p class={tw`mb-8 paragraph`}>
           I have an affinity for efficient, user-friendly web solutions. If you
@@ -57,29 +45,6 @@ export default function Home({ data: projects }: PageProps<Project[] | null>) {
         </p>*/
         }
       </section>
-      {projects
-        ? (
-          <section class={tw`mb-12`}>
-            <header class={tw`mb-4 flex flex(col sm:row) gap-8 items-center`}>
-              <h2
-                class={tw
-                  `leading-tight text(gray-900 xl md:2xl dark:white) font-medium`}
-              >
-                My current personal projects
-              </h2>
-            </header>
-            <ol class={tw`ml-8 list-decimal dark:text-dark-mode`}>
-              {projects.map((project) => (
-                <li>
-                  <a class={tw`link`} href={`/projects/${project.slugId}`}>
-                    {project.name}
-                  </a>
-                </li>
-              ))}
-            </ol>
-          </section>
-        )
-        : null}
       <SocialLinks />
     </DefaultLayout>
   );
