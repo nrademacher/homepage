@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+  /* Carried over from the previous twind config: `backgroundColor.dark-mode`
+     and `textColor.dark-mode`. Tailwind shares one colour namespace between
+     background and text, so the two values need distinct names. */
+  --color-dark-bg: #121212;
+  --color-dark-fg: rgb(201 209 217);
+}
+
+@utility link {
+  @apply text-yellow-600 hover:text-yellow-500 dark:text-yellow-400 dark:hover:text-yellow-300 hover:underline transition duration-75 ease-in-out;
+}
+
+@utility paragraph {
+  @apply leading-7 text-lg text-gray-900 dark:text-dark-fg;
+}
