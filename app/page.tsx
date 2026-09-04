@@ -1,5 +1,3 @@
-import { SocialLinks } from "@/components/SocialLinks";
-
 const STACK = [
   "React",
   "TypeScript",
@@ -21,10 +19,7 @@ export default function Home() {
             Nikolay Rademacher
           </h1>
           <p className="mt-4 paragraph">
-            <a href="https://github.com/nrademacher" className="link">
-              Full-stack software engineer
-            </a>
-            : TypeScript, React, Node.js
+            Full-stack software engineer: TypeScript, React, Node.js
           </p>
         </header>
         <p className="mb-8 paragraph">
@@ -52,7 +47,7 @@ export default function Home() {
           ))}
         </ul>
       </section>
-      <section className="mb-12">
+      <section>
         <h2 className="mb-2 text-2xl text-gray-900 dark:text-white font-semibold">
           Available for freelance work
         </h2>
@@ -65,7 +60,6 @@ export default function Home() {
           </a>
         </p>
       </section>
-      <SocialLinks />
     </>
   );
 }
