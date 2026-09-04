@@ -1,41 +1,65 @@
-import { SocialLinks } from "@/components/SocialLinks";
+const STACK = [
+  "React",
+  "TypeScript",
+  "Node.js",
+  "Express",
+  "Vue.js",
+  "C# / ASP.NET MVC",
+  "SQL",
+  "AWS Lambda",
+  "Docker",
+];
 
 export default function Home() {
   return (
     <>
       <section>
-        <header className="mb-12 flex flex-col sm:flex-row gap-8 items-center">
+        <header className="mb-12">
           <h1 className="leading-tight text-4xl md:text-5xl text-gray-900 dark:text-white font-semibold">
-            Hello 👋
+            Nikolay Rademacher
           </h1>
+          <p className="mt-4 paragraph">
+            Full-stack software engineer: TypeScript, React, Node.js
+          </p>
         </header>
         <p className="mb-8 paragraph">
-          I&apos;m Nikolay Rademacher, a highly motivated{" "}
-          <a href="https://github.com/nrademacher" className="link">
-            full-stack software engineer
-          </a>
-          .
+          Five years building web applications, front to back. Mostly SaaS:
+          multi-tenant B2B platforms, greenfield products taken to launch, and
+          applications with security requirements (stream encryption, 2FA,
+          geographic access restriction).
         </p>
         <p className="mb-8 paragraph">
-          I have an affinity for efficient, user-friendly web solutions. If you
-          want to work with me, need my expertise, or are interested in my
-          projects or collaborations, I&apos;m happy to{" "}
-          <a href="mailto:rademacher.nikolay@gmail.com" className="link">
-            hear from you
-          </a>
-          .
+          Previously at G DATA CyberDefense, Valuedesk, and itemis AG.
         </p>
-        {
-          /*<p className="mb-8 paragraph">
-          I occasionally post updates about my projects and learning on my{" "}
-          <a href="https://blog.nikolayrademacher.net" className="link">
-            blog
-          </a>
-          .
-        </p>*/
-        }
+        <ul className="mb-12 flex flex-wrap gap-x-3 gap-y-2 paragraph">
+          {STACK.map((tech, i) => (
+            <li key={tech}>
+              {tech}
+              {i < STACK.length - 1 && (
+                <span
+                  aria-hidden="true"
+                  className="ml-3 text-gray-400 dark:text-gray-600"
+                >
+                  ·
+                </span>
+              )}
+            </li>
+          ))}
+        </ul>
       </section>
-      <SocialLinks />
+      <section>
+        <h2 className="mb-2 text-2xl text-gray-900 dark:text-white font-semibold">
+          Available for freelance work
+        </h2>
+        <p className="mb-8 paragraph">
+          Two days per week, remote. €80/hour net.
+        </p>
+        <p className="paragraph">
+          <a href="mailto:rademacher.nikolay@gmail.com" className="link">
+            rademacher.nikolay@gmail.com
+          </a>
+        </p>
+      </section>
     </>
   );
 }

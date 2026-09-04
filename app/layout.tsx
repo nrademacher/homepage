@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     template: "Nikolay Rademacher | %s",
   },
   description:
-    "Homepage of Nikolay Rademacher, Full-stack software developer",
+    "Nikolay Rademacher — full-stack software engineer: TypeScript, React, Node.js. Available for freelance work.",
   icons: {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
